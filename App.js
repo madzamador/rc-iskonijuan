@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useFonts } from "expo-font";
-
-//Navigators
 import StackNavigator from "./src/navigations/StackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
+import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
+import * as SplashScreen from "expo-splash-screen";
 
 //import Themes
 import {
@@ -12,14 +12,7 @@ import {
   Provider as PaperProvider,
 } from "react-native-paper";
 
-import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
-
-const { LightTheme } = adaptNavigationTheme({
-  light: NavigationDefaultTheme,
-});
-
 // Custom font integration of React Native Expo and React Native Paper
-
 const customThemeFonts = Object.fromEntries(
   Object.entries(MD3LightTheme.fonts).map(
     ([variantName, variantProperties]) => [
@@ -30,6 +23,10 @@ const customThemeFonts = Object.fromEntries(
 );
 
 // Custom Theme Configuration for App
+
+const { LightTheme } = adaptNavigationTheme({
+  light: NavigationDefaultTheme,
+});
 
 const theme = {
   ...MD3LightTheme,
@@ -58,13 +55,29 @@ export default function App() {
     "Inter-Regular": require("./assets/fonts/Inter-Regular.otf"),
   });
 
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
   if (!fontsLoaded) {
     return null;
   }
 
   return (
     <PaperProvider theme={combinedDefaultTheme}>
-      <NavigationContainer theme={combinedDefaultTheme}>
+      <NavigationContainer
+        onReady={onLayoutRootView}
+        theme={combinedDefaultTheme}
+      >
         <StackNavigator />
       </NavigationContainer>
     </PaperProvider>
