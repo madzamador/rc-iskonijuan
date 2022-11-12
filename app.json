@@ -14,7 +14,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -22,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.devrsc.iskonijuan"
     },
     "web": {
       "favicon": "./assets/images/adaptive-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "22809402-cb8f-4783-bd2d-881b666b2958"
+      }
     }
   }
 }

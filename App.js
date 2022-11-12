@@ -1,30 +1,42 @@
 import React from "react";
+import { useFonts } from "expo-font";
+
+//Navigators
+import StackNavigator from "./src/navigations/StackNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+
+//import Themes
 import {
-  MD3LightTheme as DefaultTheme,
+  adaptNavigationTheme,
+  MD3LightTheme,
   Provider as PaperProvider,
-  Text,
 } from "react-native-paper";
 
-import { useFonts } from "expo-font";
-import { SafeAreaView } from "react-native";
+import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
+
+const { LightTheme } = adaptNavigationTheme({
+  light: NavigationDefaultTheme,
+});
 
 // Custom font integration of React Native Expo and React Native Paper
 
 const customThemeFonts = Object.fromEntries(
-  Object.entries(DefaultTheme.fonts).map(([variantName, variantProperties]) => [
-    variantName,
-    { ...variantProperties, fontFamily: "Inter-Black" },
-  ])
+  Object.entries(MD3LightTheme.fonts).map(
+    ([variantName, variantProperties]) => [
+      variantName,
+      { ...variantProperties, fontFamily: "Inter-Regular" },
+    ]
+  )
 );
 
 // Custom Theme Configuration for App
 
 const theme = {
-  ...DefaultTheme,
+  ...MD3LightTheme,
   version: 3,
   fonts: customThemeFonts,
   colors: {
-    ...DefaultTheme.colors,
+    ...MD3LightTheme.colors,
     primary: "#F55A5A",
     secondary: "#2B283A",
     tertiary: "#918E9B",
@@ -32,9 +44,18 @@ const theme = {
   },
 };
 
+const combinedDefaultTheme = {
+  ...theme,
+  ...LightTheme,
+  colors: {
+    ...theme.colors,
+    ...LightTheme.colors,
+  },
+};
+
 export default function App() {
   const [fontsLoaded] = useFonts({
-    "Inter-Black": require("./assets/fonts/Inter-Black.otf"),
+    "Inter-Regular": require("./assets/fonts/Inter-Regular.otf"),
   });
 
   if (!fontsLoaded) {
@@ -42,28 +63,10 @@ export default function App() {
   }
 
   return (
-    <PaperProvider theme={theme}>
-      <SafeAreaView>
-        <Text variant='displayLarge'>Display Large</Text>
-        <Text variant='displayMedium'>Display Medium</Text>
-        <Text variant='displaySmall'>Display small</Text>
-
-        <Text variant='headlineLarge'>Headline Large</Text>
-        <Text variant='headlineMedium'>Headline Medium</Text>
-        <Text variant='headlineSmall'>Headline Small</Text>
-
-        <Text variant='titleLarge'>Title Large</Text>
-        <Text variant='titleMedium'>Title Medium</Text>
-        <Text variant='titleSmall'>Title Small</Text>
-
-        <Text variant='bodyLarge'>Body Large</Text>
-        <Text variant='bodyMedium'>Body Medium</Text>
-        <Text variant='bodySmall'>Body Small</Text>
-
-        <Text variant='labelLarge'>Label Large</Text>
-        <Text variant='labelMedium'>Label Medium</Text>
-        <Text variant='labelSmall'>Label Small</Text>
-      </SafeAreaView>
+    <PaperProvider theme={combinedDefaultTheme}>
+      <NavigationContainer theme={combinedDefaultTheme}>
+        <StackNavigator />
+      </NavigationContainer>
     </PaperProvider>
   );
 }
