@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect } from "react";
 import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import React, { useCallback, useEffect } from "react";
 import StackNavigator from "./src/navigations/StackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
-import * as SplashScreen from "expo-splash-screen";
 
 //import Themes
 import {
@@ -18,6 +18,7 @@ const customThemeFonts = Object.fromEntries(
     ([variantName, variantProperties]) => [
       variantName,
       { ...variantProperties, fontFamily: "Inter-Regular" },
+      { ...variantProperties, fontFamily: "Inter-Bold" },
     ]
   )
 );
@@ -31,7 +32,9 @@ const { LightTheme } = adaptNavigationTheme({
 const theme = {
   ...MD3LightTheme,
   version: 3,
+  roundness: 6,
   fonts: customThemeFonts,
+  myOwnProperty: true,
   colors: {
     ...MD3LightTheme.colors,
     primary: "#F55A5A",
@@ -53,6 +56,7 @@ const combinedDefaultTheme = {
 export default function App() {
   const [fontsLoaded] = useFonts({
     "Inter-Regular": require("./assets/fonts/Inter-Regular.otf"),
+    "Inter-Bold": require("./assets/fonts/Inter-Bold.otf"),
   });
 
   useEffect(() => {
@@ -73,7 +77,7 @@ export default function App() {
   }
 
   return (
-    <PaperProvider theme={combinedDefaultTheme}>
+    <PaperProvider theme={theme}>
       <NavigationContainer
         onReady={onLayoutRootView}
         theme={combinedDefaultTheme}
