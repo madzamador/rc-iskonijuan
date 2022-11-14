@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import { Text, TextInput } from "react-native-paper";
+import LoginButton from "../components/atoms/LoginButton";
 
 export default function SigninScreen() {
   const [email, setEmail] = useState("");
@@ -39,6 +40,19 @@ export default function SigninScreen() {
           forceTextInputFocus={false}
           style={[styles.textInput, { marginTop: 15 }]}
         />
+        <View style={styles.buttonContainer}>
+          <LoginButton title='Sign In' style={styles.button} />
+          <Text variant='bodyLarge' style={styles.forgotPasswordText}>
+            Forgot Password?
+          </Text>
+
+          <Text variant='bodyLarge' style={styles.signUpText}>
+            Don't have an account?{" "}
+            <Text variant='bodyLarge' style={styles.signUpLink}>
+              Sign Up
+            </Text>
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -52,17 +66,16 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   imageIcon: {
-    width: 263,
-    height: 114,
-    resizeMode: "contain",
+    width: 300,
+    height: 130,
   },
   imageContainer: {
-    marginTop: 40,
+    marginTop: 70,
 
     alignItems: "center",
   },
   signinContainer: {
-    marginTop: 24,
+    marginTop: 20,
     borderBottomStartRadius: 0,
     borderBottomEndRadius: 0,
     width: "100%",
@@ -76,6 +89,34 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   textInput: {
+    fontSize: 18,
+    fontWeight: "600",
+  },
+  button: {
+    margin: 4,
+    width: "100%",
+    padding: 4,
+  },
+  buttonContainer: {
+    marginTop: 22,
+    alignItems: "center",
+  },
+  forgotPasswordText: {
+    color: "#2B283A",
+    fontSize: 18,
+    fontWeight: "600",
+    marginTop: 22,
+    paddingBottom: 24,
+  },
+  signUpText: {
+    color: "#2B283A",
+    fontSize: 18,
+    fontWeight: "600",
+    bottom: 0,
+    paddingBottom: 24,
+  },
+  signUpLink: {
+    color: "#F55A5A",
     fontSize: 18,
     fontWeight: "600",
   },

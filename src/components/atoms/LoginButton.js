@@ -9,7 +9,6 @@ export default function LoginButton(props) {
     <Button
       mode='contained'
       buttonColor={props.color}
-      style={styles.button}
       labelStyle={[styles.fontStyles, theme.isV3 && styles.md3FontStyles]}
       {...props}
     >

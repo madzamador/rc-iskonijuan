@@ -15,9 +15,10 @@ export default function WelcomeContainer() {
         vel quam vitae ultrices. Morbi tincidunt risus libero, eu feugiat nisi
         dictum eget.{" "}
       </Text>
-      <View style={styles.buttonRow}>
+      <View style={styles.buttonContainer}>
         <LoginButton
           title='Sign In'
+          style={styles.button}
           color='#2B283A'
           onPress={() => {
             navigation.navigate("SignIn");
@@ -26,6 +27,7 @@ export default function WelcomeContainer() {
         />
         <LoginButton
           title='Sign Up'
+          style={styles.button}
           color='#F55A5A'
           onPress={() => {
             navigation.navigate("SignUp");
@@ -51,13 +53,19 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
   },
 
+  button: {
+    margin: 4,
+    width: 130,
+    height: 46,
+  },
+
   welcomeText: {
     fontWeight: "700",
     fontSize: 52,
     letterSpacing: 0.01,
     paddingBottom: 20,
   },
-  buttonRow: {
+  buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 45,
