@@ -1,23 +1,20 @@
 import React, { useEffect } from "react";
-import { StyleSheet, View, Image, Animated, Easing } from "react-native";
-import { Text } from "react-native-paper";
-import LoginButton from "../components/atoms/LoginButton";
-import { useNavigation } from "@react-navigation/native";
+import { StyleSheet, View, Image } from "react-native";
 import WelcomeContainer from "../components/molecules/WelcomeContainer";
+import Animated, { SlideInDown, BounceIn } from "react-native-reanimated";
 
 export default function WelcomeScreen() {
-  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
+      <Animated.View entering={BounceIn} style={styles.imageContainer}>
         <Image
           source={require("../../assets/images/logo-bg.png")}
           style={styles.imageIcon}
         />
-      </View>
-      <View>
+      </Animated.View>
+      <Animated.View entering={SlideInDown.duration(800)}>
         <WelcomeContainer />
-      </View>
+      </Animated.View>
     </View>
   );
 }
