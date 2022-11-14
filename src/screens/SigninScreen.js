@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { Button, Text, TextInput } from "react-native-paper";
+import { Text, TextInput } from "react-native-paper";
 
 export default function SigninScreen() {
   const [email, setEmail] = useState("");

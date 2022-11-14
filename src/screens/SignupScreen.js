@@ -5,7 +5,7 @@ import { Text } from "react-native-paper";
 export default function SignupScreen() {
   return (
     <View style={styles.container}>
-      <Text variant='bodyLarge'>HomeScreen</Text>
+      <Text variant='bodyLarge'>SignUp Screen</Text>
     </View>
   );
 }
