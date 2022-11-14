@@ -13,32 +13,15 @@ export default function StackNavigator() {
     <AuthStack.Navigator
       screenOptions={{
         headerShown: false,
-        gestureDirection: "vertical",
       }}
     >
       {user ? (
-        <AuthStack.Screen
-          headerShown='false'
-          name='Home'
-          component={HomeScreen}
-        />
+        <AuthStack.Screen name='Home' component={HomeScreen} />
       ) : (
         <>
-          <AuthStack.Screen
-            headerShown='false'
-            name='Welcome'
-            component={WelcomeScreen}
-          />
-          <AuthStack.Screen
-            headerShown='false'
-            name='SignIn'
-            component={SigninScreen}
-          />
-          <AuthStack.Screen
-            headerShown='false'
-            name='SignUp'
-            component={SignupScreen}
-          />
+          <AuthStack.Screen name='Welcome' component={WelcomeScreen} />
+          <AuthStack.Screen name='SignIn' component={SigninScreen} />
+          <AuthStack.Screen name='SignUp' component={SignupScreen} />
         </>
       )}
     </AuthStack.Navigator>
