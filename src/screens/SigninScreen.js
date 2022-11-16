@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import { Text, TextInput } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
 import LoginButton from "../components/atoms/LoginButton";
 
 export default function SigninScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -41,7 +44,11 @@ export default function SigninScreen() {
           style={[styles.textInput, { marginTop: 15 }]}
         />
         <View style={styles.buttonContainer}>
-          <LoginButton title='Sign In' style={styles.button} />
+          <LoginButton
+            title='Sign In'
+            style={styles.button}
+            onPress={() => navigation.navigate("Home")}
+          />
           <Text variant='bodyLarge' style={styles.forgotPasswordText}>
             Forgot Password?
           </Text>
