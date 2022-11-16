@@ -1,6 +1,6 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
-import Octicons from "react-native-vector-icons/Octicons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "../screens/tabScreens/HomeScreen";
 import ChatScreen from "../screens/tabScreens/ChatScreen";
 import MatchScreen from "../screens/tabScreens/MatchScreen";
@@ -14,22 +14,26 @@ const TabArray = [
   {
     name: "Home",
     component: HomeScreen,
-    icon: "home",
+    focusedIcon: "home",
+    unfocusedIcon: "home-outline",
   },
   {
     name: "Chat",
     component: ChatScreen,
-    icon: "comment",
+    focusedIcon: "chatbox",
+    unfocusedIcon: "chatbox-outline",
   },
   {
     name: "Match",
     component: MatchScreen,
-    icon: "heart-fill",
+    focusedIcon: "heart",
+    unfocusedIcon: "heart-outline",
   },
   {
     name: "Notification",
     component: NotificationScreen,
-    icon: "bell",
+    focusedIcon: "notifications",
+    unfocusedIcon: "notifications-outline",
   },
 ];
 
@@ -38,9 +42,9 @@ export default function BottomNavigator() {
     <Tab.Navigator
       initialRouteName='Home'
       compact={true}
+      shifting={true}
       activeColor='#F55A5A'
       inactiveColor='#918E9B'
-      labeled={false}
       barStyle={{
         backgroundColor: "#FFFFFF",
         position: "absolute",
@@ -54,8 +58,12 @@ export default function BottomNavigator() {
           name={item.name}
           component={item.component}
           options={{
-            tabBarIcon: ({ color }) => (
-              <Octicons name={item.icon} color={color} size={23} />
+            tabBarIcon: ({ color, focused }) => (
+              <Ionicons
+                name={focused ? item.focusedIcon : item.unfocusedIcon}
+                color={color}
+                size={27}
+              />
             ),
             tabBarBadge: item.name === "Notification" ? 5 : null,
           }}
