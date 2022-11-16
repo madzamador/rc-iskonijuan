@@ -46,10 +46,10 @@ export default function BottomNavigator() {
       activeColor='#F55A5A'
       inactiveColor='#918E9B'
       barStyle={{
-        backgroundColor: "#FFFFFF",
         position: "absolute",
+        backgroundColor: "#FFFFFF",
         height: 52,
-        bottom: 16,
+        bottom: 17,
       }}
     >
       {TabArray.map((item, index) => (

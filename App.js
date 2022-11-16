@@ -11,6 +11,7 @@ import {
   MD3LightTheme,
   Provider as PaperProvider,
 } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 // Custom font integration of React Native Expo and React Native Paper
 const customThemeFonts = Object.fromEntries(
@@ -78,12 +79,14 @@ export default function App() {
 
   return (
     <PaperProvider theme={theme}>
-      <NavigationContainer
-        onReady={onLayoutRootView}
-        theme={combinedDefaultTheme}
-      >
-        <StackNavigator />
-      </NavigationContainer>
+      <SafeAreaProvider>
+        <NavigationContainer
+          onReady={onLayoutRootView}
+          theme={combinedDefaultTheme}
+        >
+          <StackNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
     </PaperProvider>
   );
 }

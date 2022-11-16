@@ -1,20 +1,24 @@
-import { StyleSheet, View } from "react-native";
-import React from "react";
-import { Text } from "react-native-paper";
+import { StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import HeaderContainer from "../../components/molecules/HeaderContainer";
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
-      <Text variant='displayLarge'>Home Screen</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      {/* Header */}
+      <HeaderContainer />
+      {/*Header End*/}
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F55A5A",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#FFFFFF",
   },
 });
