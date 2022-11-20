@@ -5,7 +5,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 import HeaderContainer from "../../components/molecules/HeaderContainer";
-
+import TopNavigator from "../../navigations/TopNavigator";
+import Chats from "../topScreens/Chats";
 const { width, height } = Dimensions.get("window");
 
 export default function ChatScreen() {
@@ -20,6 +21,8 @@ export default function ChatScreen() {
           <Ionicons name='search' size={26} color='#F55A5A' />
         </TouchableOpacity>
       </View>
+
+      <TopNavigator />
     </SafeAreaView>
   );
 }

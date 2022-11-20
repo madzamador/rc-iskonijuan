@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "devtools": "react-devtools"
   },
   "dependencies": {
     "@react-navigation/material-bottom-tabs": "^6.2.4",

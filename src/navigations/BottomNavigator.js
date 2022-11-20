@@ -1,10 +1,10 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
-import HomeScreen from "../screens/tabScreens/HomeScreen";
-import ChatScreen from "../screens/tabScreens/ChatScreen";
-import MatchScreen from "../screens/tabScreens/MatchScreen";
-import NotificationScreen from "../screens/tabScreens/NotificationScreen";
+import HomeScreen from "../screens/bottomScreens/HomeScreen";
+import ChatScreen from "../screens/bottomScreens/ChatScreen";
+import MatchScreen from "../screens/bottomScreens/MatchScreen";
+import NotificationScreen from "../screens/bottomScreens/NotificationScreen";
 
 //Icons for the bottom navigator
 
