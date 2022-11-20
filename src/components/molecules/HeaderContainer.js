@@ -4,14 +4,14 @@ import React from "react";
 
 export default function HeaderContainer() {
   return (
-    <View>
-      <TouchableOpacity style={styles.logoContainer}>
+    <View style={styles.HeaderContainer}>
+      <TouchableOpacity>
         <Image
           style={styles.logoImage}
           source={require("../../../assets/images/logo-nobg.png")}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.avatarImage}>
+      <TouchableOpacity>
         <Avatar.Image
           size={35}
           source={{
@@ -24,15 +24,11 @@ export default function HeaderContainer() {
 }
 
 const styles = StyleSheet.create({
-  avatarImage: {
-    position: "absolute",
-    top: 25,
-    right: 16,
-  },
-  logoContainer: {
-    position: "absolute",
-    top: 15,
-    left: 16,
+  HeaderContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 16,
   },
   logoImage: {
     width: 125,

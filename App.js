@@ -58,6 +58,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     "Inter-Regular": require("./assets/fonts/Inter-Regular.otf"),
     "Inter-Bold": require("./assets/fonts/Inter-Bold.otf"),
+    "Inter-Medium": require("./assets/fonts/Inter-Medium.otf"),
   });
 
   useEffect(() => {

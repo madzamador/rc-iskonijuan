@@ -1,5 +1,6 @@
 {
   "expo": {
+    //"jsEngine": "hermes",
     "name": "rc-iskonijuan",
     "slug": "rc-iskonijuan",
     "version": "1.0.0",
@@ -15,9 +16,7 @@
       "fallbackToCacheTimeout": 0,
       "url": "https://u.expo.dev/22809402-cb8f-4783-bd2d-881b666b2958"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

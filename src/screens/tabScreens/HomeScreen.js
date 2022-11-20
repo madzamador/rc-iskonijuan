@@ -1,4 +1,10 @@
-import { StyleSheet, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import React, { useRef } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -77,6 +83,8 @@ const DummyData = [
   },
 ];
 
+const { height, width } = Dimensions.get("window");
+
 export default function HomeScreen() {
   const navigation = useNavigation();
 
@@ -94,9 +102,9 @@ export default function HomeScreen() {
           ref={swipeRef}
           containerStyle={{ backgroundColor: "transparent" }}
           cards={DummyData}
-          stackSize={5}
+          stackSize={3}
           cardIndex={0}
-          animateCardOpacity={true}
+          animateCardOpacity
           infinite
           verticalSwipe={false}
           onSwipedLeft={() => console.log("onSwipedLeft NOPE!")}
@@ -107,13 +115,19 @@ export default function HomeScreen() {
               style: {
                 label: {
                   color: "red",
+                  borderColor: "red",
+                  borderWidth: 3,
+                  borderRadius: 10,
+                  fontSize: 35,
+                  textAlign: "center",
+                  transform: [{ rotate: "35deg" }],
                 },
                 wrapper: {
                   flexDirection: "column",
                   alignItems: "flex-end",
                   justifyContent: "flex-start",
                   marginTop: 30,
-                  marginLeft: -30,
+                  marginLeft: -20,
                 },
               },
             },
@@ -122,13 +136,19 @@ export default function HomeScreen() {
               style: {
                 label: {
                   color: "green",
+                  borderColor: "green",
+                  borderWidth: 3,
+                  borderRadius: 10,
+                  fontSize: 35,
+                  textAlign: "center",
+                  transform: [{ rotate: "-35deg" }],
                 },
                 wrapper: {
                   flexDirection: "column",
                   alignItems: "flex-start",
                   justifyContent: "flex-start",
                   marginTop: 30,
-                  marginLeft: 30,
+                  marginLeft: 20,
                 },
               },
             },
@@ -180,15 +200,12 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   cardsContainer: {
-    flexDirection: "column",
-
-    marginTop: 50,
-    backgroundColor: "transparent",
+    marginTop: -30,
   },
   card: {
     backgroundColor: "white",
-    height: "60%",
-    width: "100%",
+    height: height * 0.5,
+    width: width - 40,
     alignItems: "center",
     borderRadius: 20,
     shadowColor: "#000",
@@ -205,12 +222,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%",
+    width: width,
     padding: 10,
   },
   image: {
-    width: "100%",
-    height: "45%",
+    width: width - 80,
+    height: height * 0.2,
     borderRadius: 5,
   },
   cardName: {
@@ -250,9 +267,9 @@ const styles = StyleSheet.create({
   },
 
   progressBar: {
-    width: 312,
+    width: width - 80,
     borderRadius: 7.5,
-    height: 15,
+    height: height * 0.02,
     marginTop: 10,
   },
 });
