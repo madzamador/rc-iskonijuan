@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: "white",
-    height: height * 0.5,
+    height: height * 0.55,
     width: width - 40,
     alignItems: "center",
     borderRadius: 20,

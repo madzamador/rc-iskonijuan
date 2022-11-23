@@ -5,9 +5,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 import HeaderContainer from "../../components/molecules/HeaderContainer";
-import TopNavigator from "../../navigations/TopNavigator";
-import Chats from "../topScreens/Chats";
-const { width, height } = Dimensions.get("window");
+import ChatTopNavigator from "../../navigations/ChatTopNavigator";
+
+const { width } = Dimensions.get("window");
 
 export default function ChatScreen() {
   return (
@@ -22,7 +22,7 @@ export default function ChatScreen() {
         </TouchableOpacity>
       </View>
 
-      <TopNavigator />
+      <ChatTopNavigator />
     </SafeAreaView>
   );
 }

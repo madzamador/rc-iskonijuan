@@ -1,14 +1,15 @@
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Dimensions } from "react-native";
-import Chats from "../screens/topScreens/Chats";
-import Calls from "../screens/topScreens/Calls";
+
+import Chats from "../screens/chatTopScreen/Chats";
+import Calls from "../screens/chatTopScreen/Calls";
 
 const topTab = createMaterialTopTabNavigator();
 
 const { width } = Dimensions.get("window");
 
-export default function TopNavigator() {
+export default function ChatTopNavigator() {
   return (
     <topTab.Navigator
       initialRouteName='Chats'
@@ -26,7 +27,7 @@ export default function TopNavigator() {
           height: 4,
         },
         tabBarStyle: {
-          backgroundColor: "#fff",
+          backgroundColor: "#FDFCFB",
         },
       }}
     >

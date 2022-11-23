@@ -4,6 +4,7 @@ import React, { useCallback, useEffect } from "react";
 import StackNavigator from "./src/navigations/StackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
+import Ionicon from "react-native-vector-icons/Ionicons";
 
 //import Themes
 import {
@@ -79,7 +80,12 @@ export default function App() {
   }
 
   return (
-    <PaperProvider theme={theme}>
+    <PaperProvider
+      theme={theme}
+      settings={{
+        icon: (props) => <Ionicon {...props} />,
+      }}
+    >
       <SafeAreaProvider>
         <NavigationContainer
           onReady={onLayoutRootView}
