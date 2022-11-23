@@ -4,6 +4,7 @@ import React, { useCallback, useEffect } from "react";
 import StackNavigator from "./src/navigations/StackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { DefaultTheme as NavigationDefaultTheme } from "@react-navigation/native";
+import Ionicon from "react-native-vector-icons/Ionicons";
 
 //import Themes
 import {
@@ -11,6 +12,7 @@ import {
   MD3LightTheme,
   Provider as PaperProvider,
 } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 // Custom font integration of React Native Expo and React Native Paper
 const customThemeFonts = Object.fromEntries(
@@ -57,6 +59,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     "Inter-Regular": require("./assets/fonts/Inter-Regular.otf"),
     "Inter-Bold": require("./assets/fonts/Inter-Bold.otf"),
+    "Inter-Medium": require("./assets/fonts/Inter-Medium.otf"),
   });
 
   useEffect(() => {
@@ -77,13 +80,20 @@ export default function App() {
   }
 
   return (
-    <PaperProvider theme={theme}>
-      <NavigationContainer
-        onReady={onLayoutRootView}
-        theme={combinedDefaultTheme}
-      >
-        <StackNavigator />
-      </NavigationContainer>
+    <PaperProvider
+      theme={theme}
+      settings={{
+        icon: (props) => <Ionicon {...props} />,
+      }}
+    >
+      <SafeAreaProvider>
+        <NavigationContainer
+          onReady={onLayoutRootView}
+          theme={combinedDefaultTheme}
+        >
+          <StackNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
     </PaperProvider>
   );
 }

@@ -1,22 +1,24 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
+
 import WelcomeScreen from "../screens/WelcomeScreen";
 import SigninScreen from "../screens/SigninScreen";
 import SignupScreen from "../screens/SignupScreen";
 
+import BottomNavigator from "./BottomNavigator";
+
 const AuthStack = createNativeStackNavigator();
 
 export default function StackNavigator() {
-  const user = false;
+  const isLoggedin = true;
   return (
     <AuthStack.Navigator
       screenOptions={{
         headerShown: false,
       }}
     >
-      {user ? (
-        <AuthStack.Screen name='Home' component={HomeScreen} />
+      {isLoggedin ? (
+        <AuthStack.Screen name='BottomNavigator' component={BottomNavigator} />
       ) : (
         <>
           <AuthStack.Screen name='Welcome' component={WelcomeScreen} />
