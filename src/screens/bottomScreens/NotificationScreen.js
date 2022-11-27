@@ -2,6 +2,7 @@ import { FlatList, SectionList, StyleSheet, View } from "react-native";
 import React from "react";
 import { Text, List, Avatar } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { scale } from "react-native-size-matters";
 
 import HeaderContainer from "../../components/molecules/HeaderContainer";
 
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    fontSize: 20,
+    fontSize: scale(20),
     fontWeight: "bold",
     paddingLeft: 20,
   },
@@ -144,11 +145,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   name: {
-    fontSize: 13,
+    fontSize: scale(13),
     paddingRight: 10,
-  },
-  verifiedStatus: {
-    fontSize: 12,
   },
   separator: {
     height: 1,

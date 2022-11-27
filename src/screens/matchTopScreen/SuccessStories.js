@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image, FlatList } from "react-native";
 import { Card, Text } from "react-native-paper";
+import { scale } from "react-native-size-matters";
 
 import { Dimensions } from "react-native";
 
@@ -125,11 +126,11 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   title: {
-    fontSize: 20,
+    fontSize: scale(20),
     fontWeight: "bold",
   },
   description: {
-    fontSize: 15,
+    fontSize: scale(13),
     flexShrink: 1,
   },
   screenTitle: {

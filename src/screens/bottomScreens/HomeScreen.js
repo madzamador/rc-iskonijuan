@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ProgressBar, Text } from "react-native-paper";
 import HeaderContainer from "../../components/molecules/HeaderContainer";
+import { scale } from "react-native-size-matters";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -118,7 +119,7 @@ export default function HomeScreen() {
                   borderColor: "red",
                   borderWidth: 3,
                   borderRadius: 10,
-                  fontSize: 35,
+                  fontSize: scale(30),
                   textAlign: "center",
                   transform: [{ rotate: "35deg" }],
                 },
@@ -139,7 +140,7 @@ export default function HomeScreen() {
                   borderColor: "green",
                   borderWidth: 3,
                   borderRadius: 10,
-                  fontSize: 35,
+                  fontSize: scale(35),
                   textAlign: "center",
                   transform: [{ rotate: "-35deg" }],
                 },
@@ -231,20 +232,20 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   cardName: {
-    fontSize: 18,
+    fontSize: scale(18),
     fontWeight: "bold",
     color: "black",
     paddingRight: 5,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: scale(15),
     fontWeight: "bold",
     color: "black",
     alignSelf: "flex-start",
     marginTop: 20,
   },
   cardDescription: {
-    fontSize: 12,
+    fontSize: scale(12),
     color: "black",
     alignSelf: "flex-start",
     marginTop: 10,
@@ -259,7 +260,7 @@ const styles = StyleSheet.create({
     bottom: "14%", //Here is the trick
   },
   cardDonationStatus: {
-    fontSize: 15,
+    fontSize: scale(15),
     fontWeight: "bold",
     color: "black",
     alignSelf: "flex-start",

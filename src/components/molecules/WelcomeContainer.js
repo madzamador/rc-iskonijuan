@@ -4,6 +4,7 @@ import { StyleSheet, View } from "react-native";
 import LoginButton from "../atoms/LoginButton";
 import { Text } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+import { scale, verticalScale } from "react-native-size-matters";
 
 export default function WelcomeContainer() {
   const navigation = useNavigation();
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     borderBottomStartRadius: 0,
     borderBottomEndRadius: 0,
     width: "100%",
-    height: 390,
+    height: verticalScale(360),
     borderRadius: 30,
     backgroundColor: "#FDFCFB",
     bottom: 0,
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
 
   welcomeText: {
     fontWeight: "700",
-    fontSize: 52,
+    fontSize: scale(32),
     letterSpacing: 0.01,
     paddingBottom: 20,
   },
