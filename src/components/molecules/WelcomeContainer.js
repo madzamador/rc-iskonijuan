@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
   button: {
     margin: 4,
     width: 130,
-    height: 46,
+    justifyContent: "center",
+    height: verticalScale(46),
   },
 
   welcomeText: {
