@@ -67,32 +67,38 @@ const renderItem = ({ item }) => (
 export default function SuccessStories() {
   return (
     <View style={{ flex: 1 }}>
-      <FlatList
-        nestedScrollEnabled={true}
-        ListHeaderComponent={
-          <>
-            <Text style={styles.screenTitle}>Featured Story</Text>
-            <Card mode='elevated' elevation={2} style={styles.feauredCard}>
-              <Card.Content style={styles.featuredcardContent}>
-                <Image
-                  source={{ uri: "https://picsum.photos/700" }}
-                  style={styles.featuredcardImage}
-                />
-                <View style={styles.featuredcardText}>
-                  <Text style={styles.title}>Books for Kids</Text>
-                  <Text style={styles.description} numberOfLines={3}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
-                </View>
-              </Card.Content>
-            </Card>
-          </>
-        }
-        data={Dummy_Data}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
+      <View
+        style={{
+          height: height * 0.7,
+        }}
+      >
+        <FlatList
+          nestedScrollEnabled={true}
+          ListHeaderComponent={
+            <>
+              <Text style={styles.screenTitle}>Featured Story</Text>
+              <Card mode='elevated' elevation={2} style={styles.feauredCard}>
+                <Card.Content style={styles.featuredcardContent}>
+                  <Image
+                    source={{ uri: "https://picsum.photos/700" }}
+                    style={styles.featuredcardImage}
+                  />
+                  <View style={styles.featuredcardText}>
+                    <Text style={styles.title}>Books for Kids</Text>
+                    <Text style={styles.description} numberOfLines={3}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </Text>
+                  </View>
+                </Card.Content>
+              </Card>
+            </>
+          }
+          data={Dummy_Data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 }

@@ -40,7 +40,7 @@ const TabArray = [
 export default function BottomNavigator() {
   return (
     <Tab.Navigator
-      initialRouteName='Chat'
+      initialRouteName='Notification'
       compact={true}
       shifting={true}
       activeColor='#F55A5A'

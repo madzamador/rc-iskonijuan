@@ -67,11 +67,17 @@ const renderItem = ({ item }) => (
 export default function LikedCampaign() {
   return (
     <View style={{ flex: 1 }}>
-      <FlatList
-        data={Dummy_Data}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      />
+      <View
+        style={{
+          height: height * 0.7,
+        }}
+      >
+        <FlatList
+          data={Dummy_Data}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 }

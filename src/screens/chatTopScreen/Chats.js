@@ -1,5 +1,5 @@
 import { StyleSheet, View, FlatList } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { Avatar, List, Text } from "react-native-paper";
 
 const persons = [
