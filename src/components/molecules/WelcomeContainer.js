@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     borderBottomStartRadius: 0,
     borderBottomEndRadius: 0,
     width: "100%",
-    height: verticalScale(360),
+    height: verticalScale(350),
     borderRadius: 30,
     backgroundColor: "#FDFCFB",
     bottom: 0,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 
   button: {
     margin: 4,
-    width: 130,
+    width: scale(130),
     justifyContent: "center",
     height: verticalScale(46),
   },
@@ -65,11 +65,11 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     fontSize: scale(32),
     letterSpacing: 0.01,
-    paddingBottom: 20,
+    paddingBottom: verticalScale(20),
   },
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 45,
+    marginTop: verticalScale(45),
   },
 });

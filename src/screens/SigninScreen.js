@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, TouchableOpacity } from "react-native";
 import { Text, TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import LoginButton from "../components/atoms/LoginButton";
-import { scale } from "react-native-size-matters";
+import { scale, verticalScale } from "react-native-size-matters";
 
 export default function SigninScreen() {
   const [email, setEmail] = useState("");
@@ -54,12 +54,16 @@ export default function SigninScreen() {
             Forgot Password?
           </Text>
 
-          <Text variant='bodyLarge' style={styles.signUpText}>
-            Don't have an account?{" "}
-            <Text variant='bodyLarge' style={styles.signUpLink}>
-              Sign Up
+          <View style={{ flexDirection: "row", marginTop: 20 }}>
+            <Text variant='bodyLarge' style={styles.signUpText}>
+              Don't have an account? {""}
             </Text>
-          </Text>
+            <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+              <Text variant='bodyLarge' style={styles.signUpLink}>
+                Sign Up
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -74,27 +78,27 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   imageIcon: {
-    width: 300,
-    height: 130,
+    width: scale(300),
+    height: verticalScale(130),
+    resizeMode: "contain",
   },
   imageContainer: {
-    marginTop: 70,
-
+    marginTop: verticalScale(70),
     alignItems: "center",
   },
   signinContainer: {
-    marginTop: 20,
+    marginTop: verticalScale(20),
     borderBottomStartRadius: 0,
     borderBottomEndRadius: 0,
     width: "100%",
-    height: 200,
+    height: verticalScale(200),
   },
   signinText: {
     color: "#2B283A",
     fontSize: scale(24),
     fontWeight: "700",
-    marginTop: 24,
-    paddingBottom: 24,
+    marginTop: verticalScale(24),
+    paddingBottom: verticalScale(24),
   },
   textInput: {
     fontSize: scale(16),
