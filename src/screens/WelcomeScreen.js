@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { StyleSheet, View, Image } from "react-native";
 import WelcomeContainer from "../components/molecules/WelcomeContainer";
 import Animated, { SlideInDown, BounceIn } from "react-native-reanimated";
+import { scale, verticalScale } from "react-native-size-matters";
 
 export default function WelcomeScreen() {
   return (
@@ -33,5 +34,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  imageIcon: { width: 300, height: 125 },
+  imageIcon: {
+    width: scale(300),
+    height: verticalScale(125),
+    resizeMode: "contain",
+  },
 });

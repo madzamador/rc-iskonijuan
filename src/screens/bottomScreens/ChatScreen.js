@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, View, Dimensions } from "react-native";
 import { Text } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { scale } from "react-native-size-matters";
 
 import HeaderContainer from "../../components/molecules/HeaderContainer";
 import ChatTopNavigator from "../../navigations/ChatTopNavigator";

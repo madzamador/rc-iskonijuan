@@ -5,6 +5,7 @@ import HomeScreen from "../screens/bottomScreens/HomeScreen";
 import ChatScreen from "../screens/bottomScreens/ChatScreen";
 import MatchScreen from "../screens/bottomScreens/MatchScreen";
 import NotificationScreen from "../screens/bottomScreens/NotificationScreen";
+import { verticalScale } from "react-native-size-matters";
 
 //Icons for the bottom navigator
 
@@ -40,7 +41,7 @@ const TabArray = [
 export default function BottomNavigator() {
   return (
     <Tab.Navigator
-      initialRouteName='Chat'
+      initialRouteName='Home'
       compact={true}
       shifting={true}
       activeColor='#F55A5A'
@@ -48,7 +49,7 @@ export default function BottomNavigator() {
       barStyle={{
         position: "absolute",
         backgroundColor: "#FFFFFF",
-        height: 52,
+        height: verticalScale(45),
         bottom: 17,
       }}
     >

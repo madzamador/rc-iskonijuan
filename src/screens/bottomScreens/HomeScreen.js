@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ProgressBar, Text } from "react-native-paper";
 import HeaderContainer from "../../components/molecules/HeaderContainer";
+import { scale, verticalScale } from "react-native-size-matters";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -118,7 +119,7 @@ export default function HomeScreen() {
                   borderColor: "red",
                   borderWidth: 3,
                   borderRadius: 10,
-                  fontSize: 35,
+                  fontSize: scale(30),
                   textAlign: "center",
                   transform: [{ rotate: "35deg" }],
                 },
@@ -126,7 +127,7 @@ export default function HomeScreen() {
                   flexDirection: "column",
                   alignItems: "flex-end",
                   justifyContent: "flex-start",
-                  marginTop: 30,
+                  marginTop: verticalScale(30),
                   marginLeft: -20,
                 },
               },
@@ -139,7 +140,7 @@ export default function HomeScreen() {
                   borderColor: "green",
                   borderWidth: 3,
                   borderRadius: 10,
-                  fontSize: 35,
+                  fontSize: scale(35),
                   textAlign: "center",
                   transform: [{ rotate: "-35deg" }],
                 },
@@ -147,7 +148,7 @@ export default function HomeScreen() {
                   flexDirection: "column",
                   alignItems: "flex-start",
                   justifyContent: "flex-start",
-                  marginTop: 30,
+                  marginTop: verticalScale(30),
                   marginLeft: 20,
                 },
               },
@@ -200,7 +201,7 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   cardsContainer: {
-    marginTop: -30,
+    marginTop: verticalScale(-30),
   },
   card: {
     backgroundColor: "white",
@@ -229,25 +230,26 @@ const styles = StyleSheet.create({
     width: width - 80,
     height: height * 0.2,
     borderRadius: 5,
+    resizeMode: "cover",
   },
   cardName: {
-    fontSize: 18,
+    fontSize: scale(18),
     fontWeight: "bold",
     color: "black",
     paddingRight: 5,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: scale(15),
     fontWeight: "bold",
     color: "black",
     alignSelf: "flex-start",
-    marginTop: 20,
+    marginTop: verticalScale(20),
   },
   cardDescription: {
-    fontSize: 12,
+    fontSize: scale(12),
     color: "black",
     alignSelf: "flex-start",
-    marginTop: 10,
+    marginTop: verticalScale(10),
   },
   buttonContainer: {
     width: "100%",
@@ -259,17 +261,17 @@ const styles = StyleSheet.create({
     bottom: "14%", //Here is the trick
   },
   cardDonationStatus: {
-    fontSize: 15,
+    fontSize: scale(15),
     fontWeight: "bold",
     color: "black",
     alignSelf: "flex-start",
-    marginTop: 10,
+    marginTop: verticalScale(10),
   },
 
   progressBar: {
     width: width - 80,
     borderRadius: 7.5,
     height: height * 0.02,
-    marginTop: 10,
+    marginTop: verticalScale(10),
   },
 });

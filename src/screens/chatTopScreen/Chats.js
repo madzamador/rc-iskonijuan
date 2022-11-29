@@ -1,6 +1,7 @@
 import { StyleSheet, View, FlatList } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { Avatar, List, Text } from "react-native-paper";
+import { scale } from "react-native-size-matters";
 
 const persons = [
   {
@@ -175,11 +176,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   name: {
-    fontSize: 16,
+    fontSize: scale(16),
     paddingRight: 10,
   },
   verifiedStatus: {
-    fontSize: 12,
+    fontSize: scale(12),
   },
   separator: {
     height: 1,
