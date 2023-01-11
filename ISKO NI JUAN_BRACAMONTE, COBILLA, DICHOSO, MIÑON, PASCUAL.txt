@@ -1,0 +1,1790 @@
+﻿ISKO NI JUAN         MOBILE APPLICATION                                                     i
+ ISKO NI JUAN: MOBILIZING SMALL-SCALE PHILANTHROPY TO FINANCE COLLEGE STUDENTS USING MACHINE LEARNING
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+A Thesis
+Presented to the Faculty of the
+Computer Studies Department
+College of Science
+Technological University of the Philippines
+Ayala Boulevard, Manila
+
+
+
+
+
+
+by
+
+
+
+
+
+
+Miguel Andrew S. Bracamonte
+Ramil S. Cobilla Jr.
+Jhon Carlo P. Dichoso
+Alexandre Benedict H. Miñon
+April Kate L. Pascual
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+In Partial Fulfillment of the
+Requirements for the Degree
+Bachelor of Science in Computer Science
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+2023
+APPROVAL SHEET
+
+
+ABSTRACT
+
+
+ACKNOWLEDGMENT
+
+
+TABLE OF CONTENTS
+ 
+	Page
+	Title Page
+Approval Sheet
+Abstract
+Acknowledgment
+Table of Contents
+List of Tables
+List of Figures
+List of Appendices
+	i
+ii
+iii
+iv
+v
+vi
+vii
+viii
+	Chapter 1
+	THE PROBLEM AND ITS SETTING
+	 
+	 
+	Introduction
+Background of the Study
+Objectives of the Study
+Scope and Delimitations of the Study
+Significance of the Study
+	1
+2
+6
+8
+10
+	Chapter 2
+	CONCEPTUAL FRAMEWORK
+	 
+	 
+	Review of Related Literature
+Related Studies
+Conceptual Model of the Study
+Operational Definition of Terms
+	
+
+
+
+
+
+
+
+	Chapter 3
+	METHODOLOGY
+	 
+	 
+	Project Design
+Project Development
+Operation and Testing Procedure
+Evaluation Procedure
+	
+
+
+
+
+
+
+
+	REFERENCES
+	
+
+	APPENDICES
+	
+
+	RESEARCHER’S PROFILE
+	
+
+	
+
+LIST OF TABLES
+Table
+	 
+	Page
+	1
+	Accuracy Testing Procedure of the Mobile Application
+	72
+	2
+	Likert’s Scale
+	74
+	
+
+ 
+
+
+ 
+	
+
+
+
+	
+
+
+
+
+
+
+
+ 
+
+
+	________________
+
+
+LIST OF FIGURES
+Figure
+	 
+	Page
+	1
+	Mean Absolute Error Formula
+	
+
+	2
+	Root Mean Squared Error Formula
+	
+
+	3
+4
+5
+6
+7
+8
+9
+10
+	Precision Formula
+Recall Formula
+Conceptual Model of the Study
+Block Diagram of Crowdfunding Mobile Application
+Use Case Diagram of Isko ni Juan Mobile Application
+Database Design of  Isko ni Juan Mobile Application
+Folder Structure Composed of Different Folders Based on Feature
+NoSQL Document Model of Isko ni Juan Mobile Application
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	________________
+
+
+LIST OF APPENDICES
+Table
+	 
+	Page
+	1
+	Sample Evaluation Sheet
+	
+
+	
+
+Chapter 1
+THE PROBLEM AND ITS SETTING
+
+
+Introduction
+Education plays a crucial role in our lives because it allows us to reach our highest potential (Leverage Edu, 2022). The importance of education is that it allows everyone to develop a positive outlook on the world and our society. It is the key to future success and paves the way for many opportunities in our lives. Education is considered as one of the most important things that Filipino parents can provide to their children. They believe that having a better education will open doors to a better future and eventually help them overcome poverty (Maligalig et al., 2010). Consequently, they are willing to make significant sacrifices to send their children to school (LaRocque, 2004). However, given a family's severely constrained financial situation, basic needs like food and shelter often take priority over education. Hence, the family's chances of overcoming poverty are unlikely. Therefore, it is critical that the underprivileged have equal access to education.
+Talented students should not be denied the opportunities that only fortunate students have to pursue a higher education and build professional careers. Hence, to encourage higher education, the government has implemented a number of initiatives, including the distribution of scholarships to students from low-income families. There are different kinds of scholarship providers in the Philippines, including the government, corporations, and the schools themselves. Since most scholarships are given out by big organizations, there are philanthropists who are willing to help students with or without any scholarships. Small-scale philanthropists can give whatever they can give, whether it is money or school supplies, as long as it is based on the needs of the student. These philanthropists can be individuals or an organization seeking to find students that they can help. Scholarships have assisted students in funding their educational expenses. However, students encountered some difficulties in obtaining a scholarship. These include a lack of application form traceability, failure in meeting deadlines and application requirements, and lack of transparency between students and their respective donors.
+Crowdfunding is one method of obtaining a scholarship or educational assistance. It is an emerging internet platform that provides financial assistance to those in need. With the advancement of internet technology, crowdfunding platforms have evolved into a new kind of network funding. Thus, the number of projects released on crowdfunding platforms is increasing as the platforms expand, making it difficult for donors to discover acceptable crowdfunding projects rapidly which results in the "information overload" phenomenon. Consequently, a machine learning algorithm can solve this issue by mining a significant amount of data for consumers' interests and preferences. The application of machine learning algorithm to build a recommendation system based on collaborative filtering has found success in a variety of fields such as crowdfunding.
+
+
+Background of the Study
+Scholarships are available in the Philippines from a variety of organizations and agencies. Scholarship programs in the Philippines come in many forms. According to Zabala and Gutierrez (2017), the most popular among college students is the Entrance Scholarship, which exempts successful applicants from paying tuition for a semester or a year. Iskolar ng Bayan are students who have passed the entrance examination for State Colleges and Universities. The government either fully or partially subsidized tuition at these institutions. The Grant-in-aid Scholarship is another type of scholarship which is available to students who come from low-income families but perform well in academic subjects. However, with many Filipino students graduating and preparing to advance to a higher level of education, the application procedure of applying for a scholarship is rigorous, and the program compliance is quite demanding.
+The problem is that scholarship benefits are limited, and only a few slots are available. Hence, only a few students benefit, while the rest are unable to pursue their higher education due to a lack of financial support. In other words, not all students are eligible for scholarships, which limits their benefit. There are also several difficulties associated with the application for a scholarship. Due to the high academic standards for scholarships, it is challenging for more students to be eligible and obtain assistance. In addition, once a scholarship is accepted, the academic requirements must be fulfilled in order to keep it; otherwise, it will be revoked. Furthermore, there is no assurance that the scholarship will be renewed; this is due to factors such as insufficient money for the scholarship or the student's failure to achieve the strict academic requirements.
+According to the British Council (2016), receiving a scholarship was a key deciding factor. However, many students raised their concerns that there were not many scholarships available to Filipino students and that the conditions for some scholarships were difficult to meet. In addition, only the potential best students from prestigious universities, many of whom come from wealthy families, are eligible for some scholarships. Another issue that was raised was a general lack of understanding and information about the financial possibilities available to them.
+
+
+The findings of the study by Zabala and Gutierrez (2017) show that the financial assistance of scholars is insufficient to cover their semester expenses, resulting in usurious loans. Some of the challenges faced by the scholars were late issuing of their scholar fund support, late submission of grades delaying their ability to claim their fund support, and the tedious preparing of documents required. Also, during the renewal of scholarship awards, they faced difficulties waiting in line. Moreover, it was difficult for them to maintain their grades.
+According to Freedland (2021), the common college requirements are the student’s skills and abilities, General Weighted Average (GWA), or based on the income of the parents of the student. Even if the student meets the standards and requirements needed, the application still needs to be processed by the organization giving out the scholarship. This may lead to some students being granted the scholarship while others are rejected since most organizations can only accept or cater to a certain number of scholars that they can accommodate. Along with paying tuition, students also need help with other costs associated with attending school, which are occasionally not covered by scholarships.
+According to Mazlan and Arbaiy (2022), the current process of applying for a scholarship entails filling out an application form and sending it either by mail or email to the office. Application assessment and systematic management, search, and analysis are just a few of the challenges that the use of existing application evaluation methodologies brings up. The method of implementation and processing of the scholarship application is done manually, namely by filling out the softcopy form and sending the electronic document via email. The applicant's information and the application record are not stored systematically, which causes issues. Furthermore, manually storing data is difficult because it can result in damaged forms and paper dumping. The use of paper nowadays is not so traditional because it can be changed with the growing use of information technology. The application form evaluation process is not done in a systematic manner, which can cause delays in determining eligibility or results.
+Recently, machine learning (ML) techniques have shown outstanding performance in helping nonprofit organizations with fundraising activities (Farrokhvar et al., 2018). In the current study, the recommendation system that uses machine learning will recommend scholars based on the user's pattern. By improving technology and machine learning, students can find potential benefactors and benefactors can fund eligible students without invasive measures. Hence, every talented student can have the opportunities they deserve by revolutionizing the funding scheme with machine learning.
+The above-mentioned scenarios prompted the researchers to develop a mobile application as a crowdfunding platform for student scholarship scheme applications and to provide a platform for small-scale philanthropists to help students in need even in the small way. This study aims to provide a platform for deprived students that will create opportunities by outsourcing funds for their tertiary education. The main importance of this study is to facilitate the search for financial assistance and save time for the applicant eligibility process. The goal of this study is to designate the predictive model for a machine learning-based recommendation system. The recommendation system can be employed to assist benefactors in finding their beneficiaries and for students to find their potential benefactors. It hopes to contribute to providing a user-friendly environment and platform to students where they can quickly look for and apply for scholarships that meet their academic profile and the organization's criteria by using the directory of scholarship programs in the Philippines. 
+
+
+Objectives of the Study
+General Objective
+The general objective of the study is to develop a mobile application where students and philanthropists can meet. The students can make themselves known and be given a chance to be a scholar and for the small-scale philanthropist to be able to help the students in need in any way that they can.
+Specific Objectives
+The following are the specific objectives of the study:
+1. Design mobile application modules for the student and philanthropist with the following components:
+   1. Module for the student where they can make themselves known for the different philanthropists with the following features:
+      * Create account, registered as a student
+      * Upload credentials, proof of identification and academic achievements
+      * Create, View, Share, Edit, End, and Delete Campaign
+      * Choose a benefactor that they seek for donation
+      * Apply on scholarship  given by nonprofit organizations through the directory of scholarship
+      * Chat with the benefactor
+   2. Module for the philanthropist where they can choose the student that they want to help with the following features:
+      * Create account, registered as a philanthropist
+      * Upload credentials and proof of identification
+      * View and Share Campaign
+      * Choose student/s that they want to help
+      * Chat with the student applicant
+2. Develop a scholar and benefactor recommendation system with the following components:
+   1. Machine learning for the recommendation algorithm:
+      * Collaborative Filtering:
+         * Scholar recommendation 
+         * Benefactor recommendation
+      * TensorFlow.js
+   2. Mobile application as a user interface using the following tools:
+      * Visual Studio Code
+      * JavaScript
+      * React Native
+         * Expo CLI
+         * React Native Paper
+         * Expo Applications Services
+         * React Native Deck Swiper
+      * React Navigation
+      * GraphQL
+      * AWS
+         * AWS Amplify
+         * AWS Lambda
+         * AWS Cognito
+         * Sagemaker Studio
+         * SNS
+         * AppSync
+         * DynamoDB
+         * S3
+3. Test and improve the accuracy of the recommendation system based on the user’s historical preference for the benefactor and scholar that they choose.
+4. Evaluate the acceptability of the mobile application by gathering multiple users to operate the system. The tool that will be used to evaluate the application is ISO 25010, this is to evaluate the application’s acceptability in terms of sustainability, timely, accuracy, and maintainability.
+
+
+Scope and Delimitations of the Study
+The study will focus on the development of a mobile application that will serve as a crowdfunding platform for students who will be seeking scholarships or other financial aid and small-scale philanthropists who are willing to help or fund eligible students. The purpose of the study is to assist students in finding financial assistance or other forms of educational-related funding to cover academic expenses. 
+The goal of the study is to develop a mobile application that will assist students in finding scholarships or other financial aid in the Philippines depending on their interests. Users' activities will only be discussed in terms of applying for scholarships, donating support, sharing user experiences, and creating and managing campaigns, and is expected to enhance transactions, reduce paperwork, and increase the likelihood that an applicant will be awarded a scholarship. The study will examine the use of crowdfunding as a means of innovating public service funding. The funding received by students from benefactors via online education crowdfunding platforms is very different from the public funding received by their schools from national and local governments. First, when attempting to raise funds through the crowdfunding platform, students must actively create and manage fundraising campaigns for potential benefactors by describing the purpose and intended use of the requested funds. Apart from the Create Campaign feature, students can also Edit Campaign, End Campaign Successfully, and Delete Campaign. Likewise, both students and benefactors can View Campaign and Share Campaign. Students will also be able to share their experiences via social media on the platform. For the communication between the student and the benefactor, the study will include a Chat feature. However, the study will not include video chat as an option for communication.
+Aside from crowdfunding, the study will also include a directory of scholarships given by different organizations wherein students can also apply for scholarships that organizations offer. However, if the student wants to apply for the scholarship given by the organization, the student will be redirected to the portal of the organization where they can inquire or pass the requirements for the scholarship. In addition, the students can leave a comment about the scholarships given by the organizations. This is to give insight about the scholarship to other students that are interested in applying for the scholarship and to inform the researchers about the scholarships that are not available anymore. Moreover, a payment gateway is used as a financial service that provides a secure connection between the student and the benefactor. In the case of GCash which will be integrated into the mobile application, the payment gateway allows users to transfer funds using their GCash account. The payment gateway works by securely encrypting the transaction data and sending it to the payment processing network for authorization and completion. Once the transaction is approved, the funds will be directly deposited into the student's account and the student will receive a confirmation of the transaction. All payments will only be processed on the GCash payment gateway because GCash provides additional security features, such as fraud protection and customer support, to ensure the safety of the student and the benefactors’ financial information and transactions. This allows users to have confidence in using their GCash account for online payments through the mobile application.
+Mobile application development tools will be applied in the creation of Isko ni Juan. The researchers will create natively rendered mobile apps for Android with React Native. Using the same codebase, the framework enables to develop applications for a variety of platforms. JavaScript is used to enable the creation of mobile applications for a variety of platforms in non-web environments. The study will involve the use of machine learning applications for the recommendation system, which provides information filtering by minimizing the amount of data in the database and making recommendations based on the user's preferences. For creating and running machine learning models in JavaScript, the researchers will use TensorFlow.js. DynamoDB will be used to create scalable applications, store structured or unstructured data, and manage changing data schemas. AWS Services including Lambda, Amplify, Cognito, Sagemaker Studio, SNS, and Appsync will be used in the study. AWS Services has free tiers that the researchers will utilize, but the researchers will pay the cost when the free duration expires or exceeds the given usage. The mobile application can run on any Android device with at least version 5.0 of the Android Operating System (API Level 21).  The study will not include iOS, but will focus more on developing the mobile application for Android.
+The crowdfunding platform is only limited to scholarship or/and education-related funding. The creation of fundraising campaigns for other purposes is strongly discouraged. However, the platform does not intend to act as a user's broker, agent, financial institution, creditor, or insurer, nor seek to offer any users any kind of professional advice in the areas of finance, law, tax, or other fields. It is the benefactor’s obligation to know how their money will be utilized when they donate through the application and to constantly check the campaign of the scholar they have chosen for updates. The mobile application merely provides the technology to allow philanthropists and charitable organizations to connect with students.
+The study would be evaluated by purposively selected respondents composed of students, small-scale philanthropists, organizations, mobile application developers, and machine learning engineers. 
+The evaluation instrument that the researchers would be used to assess the acceptability of the mobile application consists of the ISO 25010 Software Quality Model (see Appendix A).
+
+
+Significance of the Study
+Education plays a crucial role in human life. Thus, a scholarship can make a significant impact on education. Scholarship recipients have fewer financial concerns, more time to study, and a better chance of success. Therefore, providing a platform for students to find potential benefactors to fund their education is critical for making education more accessible.
+For students, the mobile application platform will be useful in quickly finding scholarships or financial aid, allowing them to save time and money while potentially improving the quality of education. Philanthropy can play an important role in assisting students to overcome obstacles and succeed in college and beyond. The platform may also benefit sponsors/benefactors. Many philanthropists are motivated by a strong desire to help others and solve social problems. A growing body of scientific evidence also shows that philanthropy benefits the giver's well-being in terms of an increased sense of connection to others and lower stress levels. Also, the advantages of philanthropy are not limited to individuals. Organizations that support philanthropy also benefit, such as improving their public image, increasing brand awareness, and attracting new partners and talent who may be drawn to an organization that contributes to charities. Finally, this work might serve as a reference for future researchers performing research on Mobilizing-Small Scale Philanthropy to Finance College Students Using Machine Learning and other similar future studies.
+
+
+Chapter 2
+CONCEPTUAL FRAMEWORK
+
+
+This chapter presents the review of related literature, related studies, the conceptual model of the study, and the operational definition of terms relevant to this study.
+
+
+Review of Related Literature
+Introduction
+     Filipinos place a high value on education. The ultimate desire of Filipino parents for their children is to see them graduate from college, and they often believe that education is the only treasure their children may inherit from them. It is one of the fundamental principles that Filipinos hold and have passed down through generations. Higher education is a dream for many Filipinos, who see it as their chance to escape poverty and considerably improve their chances of a better life. It is an investment since it is the way to employment and empowerment. However, due to the rising cost of higher education, many students find it difficult to continue their studies. Therefore, alternative financing methods are becoming more popular across the country. One of the alternative ways for brilliant and deserving students is to seek financial aid in the form of a scholarship. Scholarships are an excellent way to bridge the funding gap between higher education budgets and rising tuition costs. However, with many Filipino students graduating and preparing to advance to a higher level of education, the application procedure of applying for a scholarship is rigorous, and the program compliance is quite demanding.
+     The problem is that scholarship benefits are limited, and only a few slots are available. Hence, only a few students benefit, while the rest are unable to pursue their higher education due to a lack of financial support. In other words, not all students are eligible for scholarships, which limits their benefit. There are also several difficulties associated with the application for a scholarship. Due to the high academic standards for scholarships, it is challenging for more students to be eligible and obtain assistance. In addition, once a scholarship is accepted, the academic requirements must be fulfilled in order to keep it; otherwise, it will be revoked. Furthermore, there is no assurance that the scholarship will be renewed; this is due to factors such as insufficient money for the scholarship or the student's failure to achieve the strict academic requirements.
+     As technology advances, various tools and methods to receive educational assistance arise. One way is to use crowdfunding platforms. The attainment of educational assistance or scholarships will be facilitated by the use of a mobile application as the crowdfunding platform that is primarily designed to assist students in finding scholarships or other types of financial aid to cover academic expenses.
+
+
+Scholarship
+     A scholarship is a financial aid given to students to support their education on the basis of academic achievement or other achievements (Merriam-Webster, n.d.).  Likewise, Cambridge University Press (n.d.) defined scholarship as a sum of money awarded by a school, college, university, or other institution to help a student who has high potential but limited financial resources to fund their studies. It is a practice of academic awards or financial aid granted to students who meet the criteria established by donors to fund their further education and help them perform well (Muhammed-Shittu, 2019). The criteria for recipient selection are set by the donor or department funding the scholarship and are firmly tied to their goals and beliefs (Goroshit, 2018). Moreover, scholarships can cover a range of expenses usually associated with higher education, including tuition, lab fees, books, room and board, transportation, and even more (Scholarships: All You Need to Know, n.d.; What Is a Scholarship, n.d.). Consequently, scholarships can relieve students and their families of a major portion of the considerable financial obligations associated with higher education. Furthermore, a scholarship is occasionally a one-time payment. Other scholarship grants are renewable; they give students with funds each academic year or semester for several years or the duration of their studies. Scholarships can be fully or partially funded, which means they can pay the entire cost or just a portion of it.
+
+
+     Types of Scholarships
+     There are different kinds of scholarship providers in the Philippines, including the government, corporations, and the schools themselves. Accordingly, there are various types of scholarship programs. Financial aid for higher education comes in the form of grants, loans, tuition reimbursement, or other institutional or private programs and is based on merit, skills, need, or other factors (Ganem & Manasse, 2011).
+     According to Bermudez (2022), the Entrance Scholarship is the most popular among college students, which exempts successful applicants from paying tuition for a semester or a year. Most private institutions offer an entrance scholarship program; however, the level of scholarship (full, partial) and the term of implementation (semestral, annual) differ from one school to another (Bermudez, 2022). On the other hand, the students who have passed the entrance exams for state colleges and universities are referred to as “Iskolar ng Bayan” (Gonzales, n.d.). The government either totally or partially subsidizes tuition fees at these institutions.
+     Another type of scholarship is the Grant-in-aid scholarship, often known as “Need-based Scholarship”. Need-based scholarships, as the name implies, are awarded based on a student's financial circumstances rather than solely on their merit (Merit Vs. Need-Based Financial Aid | Queens University of Charlotte, n.d.). This indicates that the student's family's household income does not exceed a certain threshold. Students from low-income families who show satisfactory academic performance are eligible for this scholarship (Rynearson et al., 2019). These scholarships might simply pay a fraction of a student's educational expenses or cover all of them. Even students from low-income families will be expected to achieve a specific degree of academic accomplishment, and once awarded the scholarship, they will be expected to maintain a certain GPA (Zabala & Gutierrez, 2017). 
+     On the other hand, Sponsored Scholarship programs are those that receive funding from other government agencies, private individuals, or private corporations. These scholarship programs are typically guided by administrative and monitoring policies. However, the disadvantages of these programs include a low percentage of scholarships or grants to anticipated beneficiaries, a lack of rigorous adherence to the qualifying requirements as a condition, a limitation, and poor beneficiary satisfaction due to the delayed provision of benefits (Guimba et al., 2015).
+     According to Fabula (2022), students who excel in singing, dance, and dramatics may apply for a Cultural Scholarship and if selected following an audition, might receive a tuition discount ranging from 25% to 100%. Likewise, those who are members of the school's varsity team are eligible for an Athletic Scholarship and may receive a 25% to 100% reduction in tuition fees if they have demonstrated and proven excellent achievement in sports competitions and academic grades. 
+     There is also a scheme known as "Study Now, Pay Later" or "Student Loan Program," which allows students to complete their studies and acquire a job before paying for their education. It is a program that seeks to assist college students by providing loans that will be repaid after graduation. The Commission on Higher Education (CHED) was one of the organizations that offered this type of scholarship. However, CHED has suspended its "Study Now, Pay Later" scheme since only a small portion of students paid back their loans, and less than 10% of borrowers returned the money (Fernandez, 2022). The CHED chairperson claims that the majority of individuals who applied were unsuccessful in landing jobs after graduating and did not earn enough money to repay their loans (CNN Philippines, 2022).
+
+
+     Importance and Impact of Scholarship
+     Scholarships significantly improve students' lives by relieving the financial burden and providing access to education which is a basic human right (Morato, 2022). If the financial burden cannot be eliminated, a scholarship will enable students to lessen it (Gross et al., 2007). Most families may not be able to afford to send their children to college, but a scholarship can make higher education possible for anyone who satisfies the specified eligibility conditions. According to Mahuron (2018), financial aid is a need for many college students, particularly those considering careers that require many years of education beyond the undergraduate level. Moreover, scholarships are the most preferred type of financial aid and offer a variety of advantages to applicants (Giva, Inc., n.d.).
+     Scholarships provide numerous benefits, including financial, educational, career, and personal benefits. The most obvious benefit of scholarships is that they reduce the cost of attending college; hence, making college education more affordable. Affordability is a major disincentive to obtaining and completing a college degree as college fees and other expenses continue to grow (Reynolds, 2022). Scholarships make education and professional ambitions more accessible by reducing financial barriers. Scholarships can provide students with the financial boost they need to enroll in a degree program, as well as a  morale and confidence boost in their abilities to strive toward a brighter future (Giva, Inc., n.d.). Pascarella and Terenzini (2005) found that scholarship, especially for needy students, was beneficial and had a favorable impact on their perseverance and academic success. Besides, a scholarship is important because it might ease the stress of students in achieving higher education goals. According to Muhammed-Shittu (2019), scholarship is one of the clear benefits of relieving financial and economic anxiety while a student is pursuing their academic career. In addition, scholarships reduce the number and amount of loans students must acquire to finish higher education.
+     Scholarship can significantly impact students’ educational experience by letting them choose more carefully how they spend their free time. By participating in volunteer work, internships, and service-learning, they may make the most of their college experience. Scholarships can also mean extra time for studying and learning, which can lead to improved grades and knowledge retention. Having a scholarship that pays for a student’s education and living expenses can minimize their chances of dropping out and not completing their degree (Mahuron, 2018).
+     Scholarships also provide career benefits, wherein receiving an honorable scholarship or one based on merit may enhance a student’s appeal as a job applicant (Murtagh, 2021). Employers will view it as a success if they are aware of how competitive the scholarship is. A merit-based scholarship typically shows prospective employers that students have a remarkable talent in the fields of academics, athletics, or the arts. Competitive scholarships are accomplishments a student should highlight on his resume since they will make him stand out from the competition when applying for jobs and may even help him attain the career he wants. In addition, a scholarship can also provide access to other opportunities such as creating a lasting bond with an individual, group, institution, organization, or country. Several scholarship recipients have developed long-term mutually beneficial partnerships with their scholarship providers, which include universities, non-governmental organizations, firms, foundations, governments, nations, and so on. These are relationships that would not have occurred if it had not been for the scholarship. 
+     In terms of personal benefits, a scholarship might be an excellent opportunity because it could boost a student's confidence and natural ability to manage their time while also motivating them to prioritize their academic work (Muhammed-Shittu, 2019). Furthermore, scholarships teach philanthropy by helping recipients become more empathetic and socially responsible (Murtagh, 2021). It is intended that by receiving a scholarship, students will become philanthropic themselves and give back when they are financially able. 
+
+
+     Impact of Scholarship on Student Employment
+     In the Philippines, student employment is a very common practice. It is not unusual to see working students in a classroom, especially in colleges and universities, where a major fraction of the student population works part-time. A working student is someone who works and attends school at the same time (Cambridge University Press, n.d.). Consequently, being a working student requires a lot of effort in both his education and his work. Nevertheless, scholarship can help students have more time to focus on their studies. Scholarships are one piece of the puzzle that creates a strong foundation for supporting students in their success in pursuing and completing a degree, allowing students more time and energy to focus on studies rather than part-time work (Nayak, 2021).
+     Due to the increasing cost of college tuition and other educational expenses, many families are having a difficult time paying for their children's education. Research suggests that students are working more during their college years as a way of coping with the cost of tuition. According to the findings of the study conducted by Furr and Elling (2000), the reason why students work part-time is due to financial constraints. Aside from this factor, working while in school has negative effects which can be seen in the findings of the study conducted by Darolia (2014), where students do worse academically as a result of their employment obligations. Moreover, many college students attempt to balance work and school because of financial obstacles, but this leads to a range of issues for them, including time management challenges, declines in academic performance, health issues, and personal and social issues (Pike et al., 2008; Kasworm, 2010; Bentrim et al., 2013). Many students find it challenging to graduate on time or with the excellent grades they are capable of receiving because of the pressure of balancing work and school. As a result, the students lost motivation to attend school, started to drop out, and began to look for permanent employment. 
+     According to the Commission on Higher Education (CHED), only 50% of working students complete college since many are unable to manage and concentrate on their academics, others have poor health, and others drop out due to financial constraints (ABS-CBN News, 2010). This represents around 8% of the total number of college students in the country. Despite their best efforts, many working students find it difficult to manage employment and study.
+     Therefore, scholarships can help students, particularly working students to have more time to focus on their studies. One significant advantage of scholarships is that they eliminate the need to work. Instead, students can spend all of their time concentrating on their studies and academic projects. This allows students to enhance their grades and land a better job after graduation.
+
+
+Directory of Scholarships
+     According to an article of Post University (2021), scholarship directory provides an efficient way for students to browse through different scholarships that are given by different companies or organizations. This can be an opportunity for students to earn an education without paying any fees for them to study that are available in their country. According to Geiger (2022), there are different types of scholarship directory, which are scholarship by academic year, deadline, demographic, interest, state, type, or university. 
+     The current study will use a directory of scholarships to suggest available scholarships that organizations are giving out to the public. This provides an opportunity for students to acquire a scholarship from an organization. The current application will have a dedicated module for scholarships given out by different organizations. The current study will redirect the students to the website of the organization for them to know the full details of the scholarship that's been given out to the public.
+
+
+Nonprofit Organizations
+       According to Hannah (2022), a nonprofit organization (NPO) is dedicated to a particular cause and receives all funds above and beyond what is required to operate the organization. NPOs are granted tax-exempt status by the federal government, which exempts them from paying income tax. Trusts, cooperatives, advocacy, charity, environmental, and religious groups frequently use nonprofit entities. Although not all NPOs use paid workers in management positions, the majority do. NPOs, in contrast to for-profit companies, do not have owners, and any surplus funds left over after running costs are applied to the organization's objectives rather than being shared with its participants or staff.
+     According to Tury (n.d.), the nonprofit sector, also known as the philanthropic sector, the third sector, the independent, or the voluntary sector, is made up of nonprofit organizations. Many nonprofit organizations provide scholarship programs to assist students with education costs. They do it to give back, assist members, and prepare the future workforce. The current study will include a page that provides a list of nonprofit organizations in the Philippines that offer scholarships. This would be the basis of the students in searching for a scholarship. 
+
+
+Small-Scale Philanthropist
+     According to Cambridge University Press (n.d.), small-scale is “not involving a lot of people, things, or activity, or happening over a small area.” Also, a philanthropist is defined as “a person who helps the poor, especially by giving them money.” When conjoined, the term small-scale philanthropist means a person that helps and gives to an activity within a small area. One way to receive a scholarship or financial aid is through philanthropists. Philanthropy is defined as large-scale charitable giving to worthy causes, but it is much more than that. Simply put, philanthropy is an act of goodwill and the desire to help others. Philanthropists work to solve social problems by donating to charitable organizations and supporting worthy causes financially and through advocacy. Philanthropy, when done correctly, has the potential to transform society for the better. Based on the article by Kahrilas (2020), even with large acts of generosity frequently garnering the most publicity. Many charitable people can only take part in smaller-scale activities. According to Sundar (2019), the modest giver is unconcerned with drawing attention to himself because he understands that his support for a cause or organization amounts to a mere drop in the ocean. For small-scale philanthropists, giving makes them believe in the cause and motivates them to act. 
+     According to a study conducted by Sundar (2019), philanthropists that donate to social projects can have remarkable results. This kind of contribution can help solve local problems since small-scale philanthropists are not giving for self-promotion, but because of their willingness to solve local problems. The study of Sattva (2019) supports this statement, where some small-scale philanthropists that cannot donate monetarily tend to donate other materials such as clothes or appliances that they want to give. This is an efficient way for a large number of philanthropists to participate and support social projects. Even if they may not be as spectacular, their deeds have a big impact. According to Pfeifer (2020), small-scale philanthropists donate a tiny portion of their income to charities, and recurrent small-amount donations are a great method to accumulate a larger donation over time. 
+     In the current study, small-scale philanthropists can be either individuals or organizations. They can choose to donate money or school materials to the student of their choice.
+
+
+
+
+
+
+     Crowdfunding
+     Crowdfunding is the process of acquiring necessary funds by soliciting donations from a large number of people, particularly from the internet community ("Crowdfunding," 2022). Similarly, Adhikary et al. (2018) described crowdfunding in their study as the process of funding startups, small businesses, or projects by raising modest sums of money from a large number of individuals via online social media platforms such as Facebook, Twitter, LinkedIn, and other specialized blogs. Michael Sullivan coined the word "crowdfunding" in 2006 on his website Fundavlog, which was dedicated to financing short films (Zhao et al., 2019). It is derived from the term "crowdsourcing," which refers to the practice of obtaining essential services, assets, information, or ideas by asking for contributions from a large number of individuals, particularly from the online community, as opposed to from traditional employers or suppliers (Kleeman et al., 2008).  The same procedure is used while raising money through crowdfunding. However, the goal of crowdfunding is to finance a project, or to assist a philanthropic organization, by asking for contributions in a relatively small amount from a large number of people.
+     According to Kahrilas (2020), the emergence of crowdfunding has been one of the most significant developments to philanthropy. Through this method, people make their campaign or project that needs funding publicized online so that others may provide any amount of donation they wish.  When using the internet, small donations from people all over the world can quickly accumulate.  It is notable that crowdfunding offers nonprofit organizations an additional benefit to facilitate sharing philanthropic projects through social networks, as opposed to online giving approaches where individuals make financial donations to nonprofits through the Internet (Zhong & Lin, 2018). As a matter of fact, the amount of money raised through crowdfunding sites for nonprofit organizations has increased (Jian & Usher, 2014). According to Zeoli (2015), crowdfunding generated $5.5 billion in charitable donations, making it the second-largest industry behind entrepreneurial endeavors. For instance, since its launch in 2010, the crowdfunding website GoFundMe has raised $3 billion to assist charitable causes (Johnson 2017).
+     Given the current economic situation and the rising costs of higher education, crowdfunding could be a new strategy for colleges in their fundraising efforts (Colasanti et al., 2018). According to Solemon et al. (2013), crowdfunding is one of four crowdsourcing categories for educational activities, along with gathering intelligence, co-creating a good or service, and crowd voting. Crowdfunding initiatives can range from paying student education to supporting academic research (Solemon et al., 2013). Crowdfunding in higher education institutions has the potential to broaden donors beyond established ones like alumni to include a variety of internal and external stakeholders, including students, teachers, staff, and community members (Craven, 2013). The participatory aspect of social media and crowdfunding also make it possible for project organizers and funders to quickly spread the word about the project to their social networks, allowing them to effectively complete the crowdfunding project (Colistra & Duvall, 2017).
+     As a way of acknowledging its potential, higher education institutions have been experimenting with crowdfunding to generate social and financial capital by utilizing alumni, students, community members, project organizers, and their social networks (Sandlund, 2013). However, there is not so much information about college students' opinions and motivations about contributing to university fundraising efforts. The reason for this is because the majority of studies have concentrated on crowdfunding related to research and research-related entrepreneurial initiatives (Sauermann et al., 2019), and to a lesser extent on teaching, wherein education-related start-ups have been examined (Antonenko et al., 2014).
+     Therefore, the current study will address this gap by providing a more comprehensive understanding of the function of crowdfunding in higher education. Furthermore, the current study will look into the effectiveness of crowdfunding as a fundraising tool in higher education. The crowdfunding platform will be designed primarily to assist students in finding financial aid or other forms of student funding to cover academic expenses.
+
+
+     Crowdfunding Stakeholders
+     Crowdfunding has three major actors: the fundraiser, crowdfunders or backers, and the intermediary, which is usually an online crowdfunding platform (Tomczak & Brem, 2013; Macht & Weatherston, 2015).
+     A fundraiser is defined in the context of crowdfunding as any individual or organization that makes a public plea for funding of initiatives with particular goals. In the literature, they have been referred to as "fundraisers" (Wang et al., 2018), "creators" (Ryu & Kim, 2018), or "campaigners" (Hobbs et al., 2016).
+     Similar to this, in the context of crowdfunding, a backer can be defined as any individual or organization that provides funding in response to a public call for the financing of projects with specific objectives. As stated by Shneor et al. (2020), tis group has been referred to in the literature in a variety of ways, including backers, funders, supporters, donors in donation crowdfunding , sponsors, and investors in equity and lending crowdfunding. When it comes to the advantages of engaging in crowdfunding projects, backers increase their degrees of customer empowerment by influencing the creation of future market products, as well as their chances for future consumption while enhancing their sense of community and belonging (Chaney 2019; Gerber et al. 2012; Steigenberger 2017). Backers make their donations known through social networks, notifying their acquaintances about the causes or projects they are supporting. Hence, this motivates people on their social networks to also participate in and support crowdfunding projects or campaigns (Saxton & Wang, 2014; Oh & Kim, 2017; Thies et al., 2016).
+     A crowdfunding platform is defined as an online platform that connects fundraisers and potential backers while permitting exchanges under pre-specified conditions (Shneor & Flåten, 2015). In addition, by assuring a uniform approach, it serves as an information, communication, and execution portal. It has the potential to lessen knowledge gaps and risks for participants (Haas et al. 2014). Such intermediaries earn money through campaign success fees and payments for supporting services (Belleflamme et al., 2015). However, each successful campaign they completed also improves their reputation, making them more appealing facilitators of future fundraising campaigns and contribution behavior. Additionally, each campaign aids in the platform's user base expansion (Thies et al. 2018), both in terms of drawing in new contributors and increasing the value of new users who signed up specifically to support a given cause, as well as by turning them into potential contributors to future campaigns.
+     In the current study, students will act as the fundraisers who will attempt to raise money for educational costs where they must actively create and manage fundraising campaigns for potential benefactors by describing the purpose and intended use of the requested funds. Students will also be able to share their experiences via social media on the platform. Small-scale philanthropists or organizations will take on the role of backers and they will be called as “benefactors”, who will typically contribute a relatively small sum of money to projects. The mobile application will serve as the crowdfunding platform that will connect students and small-scale philanthropists.
+
+
+Machine Learning
+     According to Scheid (2020), there is a shortage of advisors or experts about charitable agencies or organizations compared to advisors and experts on how to invest money. Machine learning can help in identifying who or what organization the benefactor should donate to. Bishop (2006) defined Machine Learning (ML) in his book “Pattern Recognition and Machine Learning '' as the study of algorithms and statistical models that can be used to perform a certain task without using outright instructions, instead relying on patterns. 
+     In recent years, crowdfunding has improved and grown more popular and is gradually becoming the supplement and enhancement of traditional financing methods (Wang et al., 2020). Thus, the amount of data produced by crowdfunding increases rapidly, but the benefits based on that data do not keep pace with the growth rate. This delay is caused by "Information Overload" or the lack of effective ways to obtain value from massive data (Preis et al., 2012; Ding et al., 2019; Ni et al., 2019; Chen et al., 2020). Personalized Recommendation Systems are designed and proposed as a solution to this problem (Resnick & Varian, 1997). Since machine learning can be trained to align the organizations that will be suggested to the benefactor. In which, this can result in the benefactor gathering insights about an organization efficiently before donating. Similar to the current study, a study conducted by Kenthapadi et al. (2017) entitled “Personalized Job Recommendation System at LinkedIn: Practical Challenges and Lessons Learned”, where machine learning is used to efficiently match the job candidates and job listings. In the current study, machine learning will play a crucial part in building up the mechanism to match the recommendation system.
+
+
+     Recommendation System: Collaborative Filtering
+     The collaborative filtering algorithm completes the recommendation service for users based on similar users' interests and preferences (Feng, Xian, and Feng 2004; Yin et al. 2019; Zheng et al. 2017). The collaborative filtering method has the advantage of mining interests and preferences rather than being limited by item text information and classification information. Furthermore, the collaborative filtering system will automatically obtain and complete the analysis without the need for user input (Wang et al., 2020). The concept of this technique was first introduced in 1992, and the creation of the Netflix Prize (Koren 2009) has increased the importance and popularity of collaborative filtering technology in the field of machine learning.
+     According to existing literature, Content-Based Recommendation Systems are projected to be less performant than Collaborative Filtering. This is due to the fact that the former just examines the user's preference when recommending an item, whereas the latter evaluates all of the users and campaigns to produce a more intelligent recommendation. Even though individuals have clearly established choice criteria, they do not always look for the same kind of content; hence, human behavior also plays a significant role in this. People are more likely to try something new if someone else with comparable behavior has done it before.
+     The current study will use a recommendation system to accurately recommend the students and benefactors to one another. The recommendation system will be developed using machine learning to create the recommender model. This model will use collaborative filtering as an algorithm for the recommendation for both the students and benefactors. Collaborative filtering works by filtering out users that do not have attributes that the current user matched with. These attributes are based on the user’s activity. This is applied to the current study as the machine learning model.
+
+
+     Evaluation Metrics for the Recommendation System
+    According to DeepAI (2020), evaluation metrics are used to assess the quality of a statistical or machine learning model. The use of evaluation metrics is critical to guaranteeing that the model is running properly and effectively. There are numerous evaluation metrics available for testing a model. Hence, it is critical to use multiple evaluation metrics to analyze a model due to the fact that a model may perform well when using one measurement from one evaluation metric but poorly when using another measurement from another evaluation metric (Soria, 2020). 
+     In the current study, the researchers will utilize the evaluation metrics from sklearn’s classification report that computes the predictive accuracy using MAE and RSME, and the classification accuracy using precision and recall.
+     According to Morozov and Zhong (2013), accuracy is one of the most essential parts of the recommender system. The estimation was made possible by finding out the projects that got rated highly by a user, and comparing them with the output of the recommender system.
+     Predictive accuracy assesses how closely a typical prediction matches a given rating. High prediction accuracy is a reasonably excellent predictor of the overall system value, even though it doesn't always equate to high user pleasure (Wit, 2008; McNee et al., 2006; Ziegler et al., 2005). Despite its limitations, prediction accuracy remains the most widely used evaluation metric, and much research has been done to enhance this evaluation metric on a specific dataset (Ali & Ghani, 2012; Bøe, 2007; Wit, 2008; Ren et al.; 2011). Several predictive accuracy metrics combine the discrepancy between the set of n predictions P and the set of actual ratings R including Mean Absolute Error (MAE) and Root Mean Squared Error (RSME).
+
+
+     Mean Absolute Error (MAE) and Root Mean Squared error (RMSE) 
+     Mean absolute error (MAE) is used to average the absolute error of the individual predictions. MAE is defined as the Manhattan distance between a set of predictions and the actual ratings. A small MAE indicates that a typical prediction is close to the actual rating. Because all errors have the same impact, this may mean half-perfect predictions and half-terrible predictions.
+     The Root Mean Squared Error (RMSE) is an MAE variant that emphasizes the effect of large errors. The Euclidean distance between a set of predictions and the actual ratings is calculated as the RMSE. A smaller RMSE indicates that the majority of the errors are small.
+     These are two of the most well-known measurements used to quantify accuracy for continuous factors. The formulas for MAE and RMSE are given below:
+  
+
+
+
+
+
+Figure 1. Mean Absolute Error Formula (Source: Shung, 2018)  
+
+
+
+
+
+
+Figure 2. Root Mean Squared Error Formula (Source: Shung, 2018)
+     Classification accuracy is the degree to which a recommender system accurately classifies an item as interesting. The distance from the tolerance threshold does not matter, but different people have different tolerances. In other words, a rating above two stars cannot be assumed as good enough for everyone (Bodabilla et al., 2010; Brun et al., 2009; Guadi et al., 2013). The tolerance threshold results in a binary scale, where a person either likes an item (positive) or not (negative). The recommendation could also be correct (true) or incorrect (false). 
+ 
+     Precision (Precision@k)
+     Precision is defined as the ratio of good projects advised divided by the total number of recommendations. Precision@k is a subset of the top k recommended items based on the user's preferences. Precision is the percentage of positive ratings that were accurately classified. It assesses how well the system recognizes positive recommendations. The precision is calculated using the following formula:
+  
+
+Figure 3. Precision Formula (Source: Shung, 2018)
+
+
+     Recall (Recall@k)
+     Recall is defined as the ratio of good projects recommended divided by the total number of good projects. Simply put, recall is the fraction of all positive recommendations that are genuinely positive. It assesses the system's ability to generate positive recommendations ( Bøe, 2007; Wit, 2008; Ren et al., 2011). Recall@k is a fraction of the top k recommended items in a set of items relevant to the user. The larger k, the higher the hit ratio because the correct answer is more likely to be covered in recommendations. The following formula is used to calculate recall:
+  
+
+Figure 4. Recall Formula (Source: Shung, 2018)
+
+
+Visual Studio Code
+     Visual Studio Code (VS Code) is an open-source code editor that assists programmers in writing code, debugging, and correcting code using IntelliSense code completion (Pedamkar, 2021). In general, it allows users to write code more easily; thus, many people consider it to be half of an IDE and an editor (Pedamkar, 2021). It is a lightweight but powerful code editor developed by Microsoft that is available for Windows, Linux, and macOS (Mustafeez, n.d.). VS Code is the most well-known IDE which supports practically all programming languages. It includes built-in support for JavaScript, TypeScript, and Node.js, and provides a large ecosystem of extensions for additional programming languages such as C++, C#, Java, Python, and PHP (Heller, 2022). Furthermore, VS Code allows users to add on and even create new extensions such as code linters, debuggers, and cloud and web development capabilities (Mustafeez, n.d.).
+     According to a 2021 developer survey conducted by Stack Overflow, VS Code is currently the most popular IDE among programmers (Stack Overflow Developer Survey 2021, 2021). According to Vaniukov (2022), over 50% of respondents composed of Web, Mobile, and SRE/DevOps developers favored Visual Studio Code over alternative other developer environment tools. Similarly, VS Code ranks as the second most preferred IDE for students, software engineers, product/project engineers, and data engineers in the 2019 Kaggle Machine Learning and Data Science Survey (Hayes, 2020). Additionally, VS Code is immensely popular among JavaScript developers. According to the most recent State of JS 2020 survey, 86% of JavaScript developers utilize the code editor (Taft, 2021). This is due to the unique features offered by VS Code, such as support for several programming languages, IntelliSense, Cross-Platform Support, Extensions and Support, Repository, Web-Support, Terminal Support, Git Support, etc. (Pedamkar, 2021).
+     Therefore, the current study will employ Visual Studio Code as the open-source editor for developing the mobile application since VS Code supports various programming languages, most notably JavaScript, which the researchers will use to develop the mobile app. It also includes several extensions, such as JavaScript IntelliSense, debugging, formatting, code navigation, and many other sophisticated language features, which help to ease the issue of software and language compatibility in the current system.
+
+
+
+
+
+
+JavaScript
+     According to the study of Aparna (2021), JavaScript is a universal programming language used by developers to create engaging experiences and fantastic UIs. JavaScript is not only intended for web development, but it can also be used as a framework for app development. If the developer has a background in developing apps using JavaScript, they will not spend too much time learning JS mobile frameworks. Companies such as Facebook and Google make use of JavaScript frameworks as a requirement for mobile applications. 
+     The current study will use JavaScript to optimize the user experience and user interface. Javascript has elements that the researchers will utilize to attract and excite new and old users. There are different libraries that JavaScript has and are useful to the development of the application. The researchers will not only utilize JavaScript for the front end development, but JavaScript will also be used for the back end development.
+
+
+React Native
+     According to Shapir (2019), React Native allows developers to design mobile applications using JavaScript only. The design that React uses is also used by React Native, since the library is developed by Facebook, both React and React Native have the same declarative components. React Native offers cross platform development, where both iOS and Android are in one codebase. To enhance the user experience, React Native introduced Hot Reloading. This is to minimize the time that it takes to reflect changes from the user interface. Mobile applications that have components using Swift or Java can utilize React Native. Since the components of the framework are used by the other components. 
+     The current study will use React Native to build the application. React Native provides reusable components that can be used to build the application's interface because of the JavaScript library. React Native allows cross platform development using a single codebase, which is efficient for the building process of the application to render to the different platforms like iOS and Android. React Native offers the feature of Hot Reloading, where it lessens the time it will take to see the changes made on the application without needing to recompile.
+
+
+     Expo CLI
+     According to an article by Codesphere (n.d.), Expo CLI is a framework on top of React Native that is used to develop mobile applications faster, easier, and more efficiently. According to the research of Herment (2021), expo is an open-source toolkit and platform that lets developers design mobile applications from a single codebase for Android, iOS, and web at the same time. This framework allows the developed mobile application to be also deployed as a web application. This is because of the multiple platforms that Expo CLI supports, which made it possible for developed mobile applications to be released in web applications. 
+     The current study will use Expo CLI combined with React Native. Expo offers tools and services that are built by React Native. Expo does not require the researchers to know the different native mobile coding, because Expo handles all the native coding. Expo also includes native APIs that can make the development of the application with ease. Some of the native APIs are cera, file system, location, push notification and many more. Which can lessen the learning process and put more time in the development process of the application.
+
+
+     React Native Paper
+     According to an article by Saini (2022), React Native Paper is a Material Design Library for UI components that allows developers to design high quality components. The collection of customizable components are called Paper. Collections such as TextInput, Icons, ButtonIcons, Card, Button and much more. Material Design Library can achieve the clarity needed for iOS applications. 
+     Therefore, the study will use React Native Paper for the component and interaction elements it offers for the user experience. React Native Paper supports the accessibility standards for most native applications. It can let the researchers achieve more by not writing components from scratch, because it is full of components that researchers can choose from and they can apply it on the application.
+
+
+     Expo Applications Services
+     According to Liak (2021), EAS stands for Expo Applications Services. This is the efficient way to upload the developed application into the app stores such as Google Play Store and App Store. EAS is a hosted cloud service built for expo and React native. EAS Build supports custom native code for building Development Clients in the cloud. EAS Submit  makes it possible for applications to be submitted to app stores in minutes or less. This is because of the automatic managed app signing credentials, automatic submissions, and defaults that are just compatible for Expo and React Native apps.
+     The current study will use Expo Application Services for the development of the application. Expo Application Services offers EAS Build and EAS Submit. EAS Build is a hosted service that the researchers will use to develop the application in the cloud. The researchers will also use EAS Submit to upload the developed application to the App Store. EAS Build and EAS submit will be used to efficiently develop the application.
+     
+     React Native Deck Swiper
+     Based on the article of Reyes (2022), a swiper is a component that functions as a scrollable gallery for views or components that are going to be displayed. Swiper is commonly used in mobile applications as an introduction screen. This allows new users to experience a smooth and continuous presentation of information. A built-in swiper is not in the core components of React Native, but there are other libraries that can also be implemented in the development. 
+     The study will use React Native Deck Swiper for the picking of students or benefactors. This type of animation is used on applications such as Tinder in picking the person that caught their attention. This type of animation for the picking of scholars and benefactors is applied on the application to improve the user experience.
+
+
+     React Navigation
+     Based on the study of Ravindranath (2021), React Navigation is a feature of a web application which serves as the central feature where the user navigates through the different pages from one to another based on the action of the user. React navigation means that it displays the exact screen components based on the URL by conditional rendering. The React library does not include the page routing mechanism when applied, it needs React Router. React Router is the React Navigation’s standard library for routing solutions for Reactjs.It is built on top of React where it enables React navigation by handling the routes for a web application. It is made popular by Facebook and Instagram as it is considered the standard routing solution in React. 
+     The current study will use React Navigation to develop browser functionalities into the application. Functionalities such as back button and refresh can be adapted to the application. React Navigation makes the UI to be displayed by depending on the URL. This simply means that the URL dictates what components will be displayed on the user interface.
+
+
+DynamoDB
+According to Wilinski (2022), DynamoDB is a part of Amazon Web Services (AWS) that provides a fast NoSQL database. DynamoDB is referred to as a key-value store. According to technopedia (2017), key-value store does not rely on traditional structures of relational database designs. DynamoDB offers more, including Multi-region, Global and Local Secondary Indexes, Streams, and Multimaster replication with enterprise-grade security and in-memory caching for big scale.
+     The current study will make use of DynamoDB to create scalable applications, store structured or unstructured data, and manage changing data schemas. Since it can handle thousands of transactions without doing any changes to the app. The pricing of DynamoDB is affordable, since it has a free tier that the researchers will utilize which is a free twenty-five (25) GB of storage and two-hundred (200) million requests per month. The researchers will pay the cost when the free storage and request have been exceeded.
+
+
+GraphQL
+     According to the website of  Red Hat (n.d.), “GraphQL is a query language and server-side runtime for application programming interfaces (APIs)”. If a user requests a data, GraphQL gives the exact data needed without  tampering with other data. The design of GraphQL is to make APIs fast, user-friendly, and flexible. This also lets the developers make different requests that can pull data from multiple sources using a single API call. GraphQL gives maintenance of APIs the adaptability to update fields without changing existing queries. 
+     The current study will use GraphQL as a query language of the application. Since the study will utilize different APIs for the development of the different features and functionalities of the application, GraphQL will efficiently handle the APIs of the application. This is because GraphQL uses a single API call, which prioritizes the user’s request and gives the user the exact request and no more. 
+
+
+AWS Amplify
+     According to javaTpoint (n.d), AWS is a full-suite package consisting of tools and services that are used to efficiently develop and launch applications. This also includes libraries, components, and built-in CLIs that can be utilized to be an advantage because Amplify allows developers to integrate myriad functions. Amplify also supports multiple platforms, such as web and mobile. The scalability factor of Amplify makes full-stack developers develop an application more comfortable.
+    The current study will use Amplify to build the mobile application. The researchers will utilize the ability of Amplify to be a full-stack application platform. This will lessen the time it will take to develop the client-side and server-side.  Amplify has different tools and services that researchers can utilize, which can make it easier in integrating Amplify to other AWS Services. The pricing of AWS Amplify makes it affordable for everyone, as it is free for the first twelve (12) months of hosting. Since there is no upfront cost, researchers and students do not need to worry about having a large budget that can support the expenses. 
+
+
+AWS Lambda
+     According to Pedamkar (2022), AWS Lambda is a service created by Amazon Web Service. This lets developers execute their code when a particular event happens, these events are defined by the developer or when conditions are met. AWS automatically manages computing resources, this means that developer provision for the resources and managing servers is needed. This lets the back end service of the system to be operated on scale, performance, security, and is serverless. 
+     The current study will use AWS Lambda since it supports the Android platform. AWS Lambda makes it possible to run the code without the need of the provision of the researchers, it operates and administrates automatically. AWS Lambda will be used to host GraphQL.
+
+
+AWS Cognito
+     According to Awati et. al. (2021), Amazon Cognito functions as an authentication for users for accessing mobile applications using a device connected to an internet. A similar article by Athithan (2020), Amazon Cognito can help APIs and infrastructure in managing users in terms of directory, authorization and authentication for mobile and web applications. Cognito has two main components, which is the user pool and identity pool. User pool is just a repository that stores details of a user. In an instance, if a user signed up on the mobile or web application then the user pool will be updated. If the user sign-in, the credentials given will undergo authentication in their user pool. While identity pool simply gives the user access to different AWS Services. Identity pool provides a temporary credential given by AWS to the user, wherein they are allowed to access the different services without being logged out in their session. User pool and identity pool can be used separately or together.
+     The current study will use Cognito for user authentication. Cognito can make the implementation of user sign in and sign out on the mobile application to take less time. The researchers will use Cognito to synchronize the data to the end-user when the device is online. Cognito has a free tier that can accommodate fifty-thousand (50,000) monthly active users that sign in directly to Cognito User Pool and fifty (50)  monthly active users through SAML 2.0 (Security Assertion Markup Language). The free tier is free for twelve (12) months, after twelve (12) months or if the monthly users active exceed fifty-thousand (50,000) there the researchers will pay the cost depending on the number of monthly active users.
+
+
+Sagemaker Studio
+     According to an article by Rizvić (2020), Sagemaker Studio is designed to be a fully integrated development environment for machine learning. For machine learning engineers, Sagemaker Studio allows the collection of development aspects of users to be stored in one place. Sagemaker Studio provides tools that are easy to use even if the developer is not experienced. The tools that are built in Sagemaker Studio such as Notebook, Debugger, Experiments, and Model Monitor. Sagemaker Studio also has Sagemaker Autopilot section, where it automatically trains the machine learning models from data in CSV. 
+     The current study will use Sagemaker Studio for the machine learning of the recommendation system. The researchers will utilize Sagemaker Studio in creating machine learning to recommend benefactors and organizations to scholars and recommend scholars to benefactors. Sagemaker Studio has a free tier that the researchers can use for two (2) months. After 2 months, the researchers will pay the cost of using Sagemaker Studio.
+
+
+SNS
+     According to Prasanthi (2022), AWS Simple Notification Service or AWS SNS is a web service that sends messages using cloud. SNS can be used to create and send a message to different networks and serverless applications. SNS is a push-based messaging service, which means that it needs a publisher before sending messages to endpoints. It uses a Publisher-Subscriber model, where the publisher is the entity who sends the message and the subscriber is the entity that receives the message. The developer can also use SNS to filter the messages to endpoints via mobile messages, SMS, and email.
+     The current study will use AWS Simple Notification Service in sending the authentication code of the user through SMS. The researchers will use AWS Cognito and SNS together in generating the authentication code that will authorize the user such as account creation. The free tier of SNS resets every month, where the researchers have one (1) million notifications for mobile push notifications, one-thousand (1,000) emails, and one-hundred thousand (100,000) HTTP/s. The researchers will pay the cost depending on the exceeding amount of notification. 
+
+
+
+
+AppSync
+     According to Brandon (2020), AWS Appsync synchronizes the data that are used in the web or mobile application. Appsync allows the developers to choose what data they want to be synchronized real-time. Appsync depends on GraphQL, this is because GraphQL allows developers to get data from various sources in the cloud. If combined with Appsync the pulled data by GraphQL will be synced real-time by Appsync. This can help the application in scaling and use different services from Amazon.
+     The current study will use AWS Appsync to fetch data from servers and serverless databases. The researchers will use Appsync to the mobile application to receive real-time notifications, changes, and updates from the different sources to endpoints. AWS Appsync has a free tier that the researchers will use. The free tier consists of two-hundred-fifty (250) thousand query or data modification operations,  two-hundred-fifty (250) thousand real-time updates, and  six-hundred (600) thousand connection-minutes for twelve (12) months. After 12 months or if the researchers exceed, the researchers will pay the cost depending on the usage.
+
+
+S3
+According to javaTpoint (n.d), S3 is produced by AWS which is considered to be one of the first services produced. The meaning of S3 is Simple Storage Service. This provided developers with highly scalable object storage, secure, and durable. S3 is a storage for objects, the developer can store images, word files, pdf files, and other files that need to be stored by the developer. The folder of S3 is called a bucket, this is where all the files are stored.
+The current study will use S3 to store images and files that will be uploaded on the mobile application. Since the mobile application will need the users to upload images, send images, and send files. All of the images and files will be handled in S3. AWS S3 offers a free tier that the researchers will use, which is a free storage of five (5) GB for 12 months. Once the free storage has been exceeded, the researchers will pay the cost of using S3.
+ 
+Software Quality Evaluation
+    The ISO/IEC 25010 is a software quality standard titled "Systems and software engineering - Systems and software Quality Requirements and Evaluation (SQuaRE) - System and software quality models." It describes the models, which are made up of characteristics and sub-characteristics, for both software product quality and software quality in use, as well as practical advice on how to use the quality models (Britton, 2021). It replaced the previous standard for measuring software quality, ISO/IEC 9126, which classified software quality into six attributes (Rebeś, 2020). ISO 25010 is more thorough and complete than ISO 9126 since additional characteristics such as security and compatibility were added that were not described in ISO 9126 (M. S. França & S. Soares, 2015).
+     According to ISO/IEC 25000:2005, a quality model (QM) is a “defined set of characteristics, and of relationships between them, which provides a framework for specifying quality requirements and evaluating quality.” The quality model serves as the foundation of a system for evaluating the quality of products and establishes the quality characteristics that will be considered when assessing a software product's qualities (Polillo, 2012). The product quality model includes both internal and exterior system qualities and is made up of 8 characteristics and 31 sub-characteristics.
+     The definitions of each characteristic are briefly outlined as follows: 
+
+
+     Functional Suitability is the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions. This characteristic is composed of the following sub-characteristics:
+* Functional Completeness. The degree to which the set of functions covers all the specified tasks and user objectives.
+* Functional Correctness. The degree to which a product or system provides correct results with the needed degree of precision
+* Functional Appropriateness. The degree to which the functions facilitate the accomplishment of specified tasks and objectives.
+
+
+     Performance efficiency represents the performance relative to the number of resources used under stated conditions. This characteristic is composed of the following sub-characteristics:
+* Time Behavior. The degree to which the response and processing times and throughput rates of a product or system, when performing its functions, meet requirements.
+* Resource Utilization. The degree to which the amounts and types of resources used by a product or system, when performing its functions, meet requirements.
+* Capacity. The degree to which the maximum limits of a product or system parameter meet requirements.
+
+
+     Compatibility represents the degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions, while sharing the same hardware or software environment. This characteristic is composed of the following sub-characteristics:
+* Co-existence. The degree to which a product can perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.
+* Interoperability. The degree to which two or more systems, products or components can exchange information and use the information that has been exchanged.
+
+
+     Usability is the degree to which a product or system can be used by specified users to achieve specific goals with effectiveness, efficiency and satisfaction in a specified context of use. This characteristic is composed of the following sub-characteristics: 
+* Appropriateness Recognizability. The degree to which users can recognize whether a product or system is appropriate for their needs.
+* Learnability. The degree to which a product or system can be used by specified users to achieve specified goals of learning to use the product or system with effectiveness, efficiency, freedom from risk and satisfaction in a specified context of use.
+* Operability. The degree to which a product or system has attributes that make it easy to operate and control.
+* User Error Protection. The degree to which a system protects users against making errors.
+* User Interface Aesthetics. The degree to which a user interface enables pleasing and satisfying interaction for the user.
+* Accessibility. The degree to which a product or system can be used by people with the widest range of characteristics and capabilities to achieve a specified goal in a specified context of use.
+
+
+     Reliability is the degree to which a system, product or component performs specified functions under specified conditions for a specified period of time. This characteristic is composed of the following sub-characteristics:
+* Maturity. The degree to which a system, product or component meets needs for reliability under normal operation.
+* Availability. The degree to which a system, product or component is operational and accessible when required for use.
+* Fault Tolerance. The degree to which a system, product or component operates as intended despite the presence of hardware or software faults.
+* Recoverability. The degree to which, in the event of an interruption or a failure, a product or system can recover the data directly affected and re-establish the desired state of the system.
+
+
+     Security is the degree to which a product or system protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization. This characteristic is composed of the following sub-characteristics:
+* Confidentiality. The degree to which a product or system ensures that data are accessible only to those authorized to have access.
+* Integrity. The degree to which a system, product or component prevents unauthorized access to, or modification of, computer programs or data.
+* Non-repudiation. The degree to which actions or events can be proven to have taken place so that the events or actions cannot be repudiated later.
+* Accountability. The degree to which the actions of an entity can be traced uniquely to the entity.
+* Authenticity. The degree to which the identity of a subject or resource can be proved to be the one claimed.
+
+
+     Maintainability represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements. This characteristic is composed of the following sub-characteristics:
+* Modularity. The degree to which a system or computer program is composed of discrete components such that a change to one component has minimal impact on other components.
+* Reusability. The degree to which an asset can be used in more than one system, or in building other assets.
+* Analysability. The degree of effectiveness and efficiency with which it is possible to assess the impact on a product or system of an intended change to one or more of its parts, or to diagnose a product for deficiencies or causes of failures, or to identify parts to be modified.
+* Modifiability. The degree to which a product or system can be effectively and efficiently modified without introducing defects or degrading existing product quality.
+* Testability. The degree of effectiveness and efficiency with which test criteria can be established for a system, product or component and tests can be performed to determine whether those criteria have been met.
+
+
+     Portability is the degree of effectiveness and efficiency with which a system, product or component can be transferred from one hardware, software or other operational or usage environment to another. This characteristic is composed of the following sub-characteristics:
+* Adaptability. The degree to which a product or system can effectively and efficiently be adapted for different or evolving hardware, software or other operational or usage environments.
+* Installability. The degree of effectiveness and efficiency with which a product or system can be successfully installed and/or uninstalled in a specified environment.
+* Replaceability. The degree to which a product can replace another specified software product for the same purpose in the same environment.
+Source: https://iso25000.com/index.php/en/iso-25000-standards/iso-25010
+
+
+     The acceptability of each component in the current study will be evaluated based on all the listed ISO 25010 criteria, including functionality suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, and portability because all of the mentioned characteristics are appropriate for the current study.
+
+
+Synthesis of Review of Related Literature
+     Based on the information gathered by the researchers, scholarships provide financial assistance to students to help them pay for a college education. Most families cannot afford to send their children to college, but a scholarship may bridge the financial gap for some families and make higher education available for students who meet the stipulated qualifying requirements. However, with many Filipino students graduating and preparing to continue their studies, the scholarship application process is rigorous, and program compliance is quite demanding. The problem is that scholarship benefits are limited, and only a few slots are available. Hence, only a few students benefit, while the rest are unable to pursue their higher education due to a lack of financial support. In other words, not all students are eligible for scholarships, which limits their use. 
+     In addition, the current process for applying for some scholarships is done manually which entails filling out an application form and sending it either by mail or email to the office. The applicant's information and the application record are not stored systematically, which causes issues including application assessment and systematic management, search, and analysis, which can cause delays in determining eligibility or results. These challenges encourage the researchers to develop a mobile application that will help students to look for scholarships or financial aid. This approach is through the use of mobile application as a crowdfunding platform that will connect students and small-scale philanthropists or organizations. Since most scholarships are given out by big organizations, there are philanthropists who are willing to help students with or without any scholarships. Small-scale philanthropists can give whatever they can give, whether it is money or school supplies, as long as it is based on the needs of the student. This approach employs a mobile application that integrates machine learning, particularly the recommendation algorithm based on collaborative filtering. 
+     In line with the information gathered, machine learning will be utilized to build a recommendation system for the crowdfunding platform. There are several types of recommendation systems but the Collaborative Filtering recommendation system is the one that will be used in the current study. The collaborative filtering algorithm will be used in completing the recommendation service for users according to the preferences and interests of similar users. The main goal is to analyze user behavior and build individual recommendations which consist of a set of campaigns they are most likely to fund. The problem can be summarized as finding a set of campaigns that every individual user is most likely to fund next given their past funding behavior. 
+     The mobile application will be developed using integrated tools. It will be a native type of application for it to be able to utilize the device features with the help of JavaScript and React Native framework. In order to build the React Native application, there are a few requirements needed, including the Visual Studio Code as the development environment, React and React Native as frontend mobile application development tools, Python for backend data analytics, and DynamoDB for database management together with GraphQL and AWS Lambda, and knowledge in JavaScript. Some frameworks including React Navigation, React Native Paper, Expo, and React Native Deck Swiper will also be utilized. In addition, AWS Amplify, AWS Cognito, Sagemaker Studio, SNS, and AppSync will also be utilized in the development of the mobile application. With the VS Code features that allow the addition of libraries, extensions, and packages, it will be easy to set up the database development for DynamoDb. Furthermore, to evaluate the effectiveness of the system, training the machine learning model will be implemented. The recommender system will be evaluated using the performance metric score such as Mean Absolute Error (MAE), Root Squared Mean Error (RSME), Precision, and Recall.
+
+
+Review of Related Studies
+     Numerous studies and works have already been conducted on the topic of helping students through philanthropy using various techniques or algorithms, such as employing blockchain technology and crowdfunding. A study conducted by Rashid et al. (2020) entitled “A Blockchain-based Platform for Crowdfunding Tertiary Education” Fund Using Blockchain Technology focuses on helping students by proposing a crowdfunding platform based on blockchain technology. The authors’ platform aims to collect, administer, and manage funds for students to pursue higher education. In order to create a globally trusted funding system, the authors utilize the blockchain’s advantages as a decentralized architecture, offering secure long-term investment mechanism, integrity, and transparency. Similar to the current study, the author also created individual dashboards for various entities to interact with each other effectively. As a result of the system being dispersed, the usage of blockchain enables them to follow the investors and pupils while also knowing that the information is accurate. This work is concentrated in tracking investors and students. With the conventional system, the full record exists just once, making it possible for any student's contract information to be maliciously changed without being noticed. Because of this, the researchers chose to develop a mobile application for students and philanthropists where they can choose based on their criteria using the directory of scholarships programs. The applicant eligibility process will be reduced.
+     In the study of Lohit et al. (2022), entitled “Blockchain Application in the Elimination of Scholarship-based Manipulation”, the study aims to eliminate manipulation of records that are used for scholarships by decentralizing the data. By decentralizing the data, the data become immutable which means that it cannot be altered by anyone. The study uses a framework to store the income certificates. The income certificate serves as the legitimacy of the family’s income. The author sees this as the solution to the problem of forged or manipulated certificates that are presented for the requirements for scholarships. The authors created a prototype of the scholarship manipulation elimination using Ethereum Smart Contract, it also used Solidity programming language to create the smart contract. In the prototype it utilizes the information of the parents as the variables, such as parent name, unique ID, organization name, code of organization, type of work, years in service, current salary, and validity of the salary. This contract will then be deployed on the parent’s workplace, this is to verify the legitimacy of the given information by the parents. Which then the university where the scholarship is being given, can use the unique ID of the parent to fetch the data which the university will use to verify the eligibility of the student. The current study will apply the steps taken by the author when it comes to the legitimacy of the given information. Uploading different credentials such as personal or school ID, Certificate of Registration, and other vital records that will prove the authenticity of the individual. Which will then be put to the validation process.
+     In the study of Ventura et al. (2021) entitled "Mobile Crowdfunding”, the researchers aim to develop a prototype for a mobile application that would allow users to donate and spread donation drives, which is similar to the current study. Donors will have the chance to share advertisements on social media and explore campaigns that have been categorized and sorted by relevance thanks to their prototype. Through the use of this tool, users will be able to design and manage unique fundraising campaigns for their own causes. The prototype will also allow users to search campaigns using categories and keywords. The current study is restricted to developing scholarship or educational funding-related fundraising campaigns. Finding new scholars, funders, and benefactors will be easier with a recommendation system based on machine learning. The algorithm can recommend scholars and donors based on interests and suggest items that are relevant to them just by looking at the user's activity and previously searched items.
+
+
+
+
+
+
+
+
+Conceptual Model of the Study
+     The conceptual model of the study is depicted in Figure 5 using the Input-Process-Output diagram. This diagram gives an overview of the flow and the whole concept of the study.
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 5. Conceptual Model of the Study
+
+
+Input
+     The knowledge, software, and hardware required for the development of machine learning to accurately recommend scholars to benefactors and benefactors to scholars. The knowledge requirements are the concepts and facts that the researchers must understand and study in order to create a foundation for the study. These requirements include understanding about the scholarships, directory of scholarships, nonprofit organizations, small-scale philanthropist, crowdfunding, crowdfunding stakeholders, knowledge in machine learning,  developing machine learning for the recommendation model, knowledge about collaborative filtering, evaluation of the machine learning model, and software quality evaluation (ISO 25010) in order to assess the acceptability of the study. The software requirements for developing machine learning for scholar and benefactor recommendation include application programs, computer languages, frameworks, databases, and operating systems. A laptop or PC with at least an Intel Pentium processor or higher that’s SSE3 capable and an Android Phone are the hardware that is needed for this study.
+
+
+Process
+     The development of the recommender model and the mobile application for the deployment of the scholar and benefactor recommendation model involves tasks such as designing, developing, and testing.
+      Design. To visualize and summarize the specifics of the system's users and their interactions with the system, the researchers should develop a use case diagram during this phase. By detailing each element and the flow of interaction between the user, mobile application, and recommender model, the use case diagram acts as a model for efficiently communicating the system's behavior in the user's terms.
+     Develop. This phase involves the development of the recommender model and the mobile application. The researchers will use the AWS Amplify framework in developing the mobile application, along with JavaScript and Expo. Additionally, adding database functionality using DynamoDB to the mobile application is included in this phase. 
+     Test. After the development, the developed mobile application together with the recommender model should undergo tests to identify the overall functionality and accuracy in recommending scholars to benefactors and benefactors to scholars. Fine-tuning of the system is necessary to ensure the accuracy of the recommender model and functionality of the system before subjecting them to evaluation.
+
+
+Evaluation
+     The evaluation block contains the evaluation system needed to satisfy the different needs of the stakeholders. The ISO/IEC 25010 assessment tool will be used to examine the system's applicability, efficiency, compatibility, usability, dependability, security, maintainability, and portability. 
+
+
+Output
+     The developed mobile application for crowdfunding is presented in the output block. To determine acceptability, the output, particularly the performance of the recommender model, should be evaluated.
+
+
+
+
+
+
+
+
+Operational Definition of Terms
+     The following terminologies are defined for better understanding the study:
+     Benefactor refers to the platform user that will contribute to a project by donating money or other help.
+     Campaign refers to the presentation of the project that will be launched on the mobile application.
+     View Campaign refers to the ability of the user to view the details of a created campaign on the platform.
+     Edit Campaign refers to the capability to make changes in the campaign on the platform.
+     Delete Campaign refers to the ability to remove a campaign from the platform.
+     Share Campaign refers to the ability to promote a campaign from the platform.
+     Donate refers to the ability of the benefactors to provide something, such as money (monetary), or commodities (nonmonetary).
+     Monetary Donation refers to making financial donations.
+     Nonmonetary Donation refers to making donations that are not focused on money.
+     Swiper refers to the user that browses through the match tab of potential scholars or benefactors.
+     Swipe refers to the act of using one's finger to slide across a mobile device's screen in order to express interest or disinterest in a potential match of scholars or benefactors.
+     Swipee refers to the user that is being viewed by the swipers.
+    Academic Scholarship refers to a specific kind of scholarship given to students who have shown academic excellence.
+    Need-Based Scholarship refers to a specific kind of scholarship given to students that needs financial aid.
+Chapter 3
+METHODOLOGY
+     This chapter entails the research methodology of the study with the following sections: project design, project development, operation and testing procedure, and evaluation procedure.
+
+
+Project Design
+     The study would develop a mobile application that will serve as a crowdfunding platform. This mobile application is designed to assist students in finding scholarships or other types of financial aid to cover academic expenses. The study would use several modeling tools to analyze the system's scope and requirements as a map or guide for project development.
+
+
+System Design
+    The model is represented through a block diagram, as depicted in Figure 6. The diagram shows the components necessary to build the infrastructure of the system and the flow of interaction between the mobile app and the AWS cloud provider.
+    The Amazon Web Services used by the researchers are composed of six primary cloud services: AWS Amplify as the main provider and backbone of other cloud services; Amazon SNS as a cloud messaging service that provides a one-time password for user authentication; Amazon Cognito as an identity provider for the user; AWS Appsync as a data language that enables the mobile application to fetch data from servers; Amazon Dynamodb as a serverless database where the user data will be stored; Amazon Sagemaker as a cloud machine learning platform that will process the dataset provided by the user and use it to generate data for the recommendation system; and lastly, Amazon S3 as a cloud storage provider that will be used to store the raw dataset and input the data into the Sagemaker services. 
+
+
+  
+
+Figure 6. Block Diagram of Isko ni Juan Mobile Application
+
+
+Software Design
+     The scope of the system’s software is represented through Use Case Diagram, as depicted in Figure 7. The diagram shows the external entities such as students/scholars, benefactors, and recommender system that all interact with the system. This diagram specifies the expected behavior, functionalities, and requirements of the software.
+
+
+
+
+
+
+
+
+    Figure 7. Use Case Diagram of Isko ni Juan Mobile Application  
+
+
+
+
+     Based on system software requirements, the following are the features of the mobile application designed for Student:
+* Student Registration
+* Upload Credentials and Proof of Identification
+*  Student Login
+*  Create Campaign
+*  Edit Campaign Details
+* End Campaign Successfully
+* Delete Campaign
+* Show Campaign
+* Share Campaign
+* View Organization Page
+* Apply for Scholarship through Directory of Scholarship
+* Discover Benefactors
+* Chat with Benefactors
+* Register E-wallet (GCash)
+
+
+     On the other hand, the following are the features of the mobile application designed for Philanthropist/Benefactor:
+* Benefactor Registration
+* Upload Credentials and Proof of Identification
+*  Benefactor Login
+*  Create Campaign
+* Show Campaign
+* Share Campaign
+* Discover Scholars
+* Chat with Scholars
+* Register E-wallet (GCash)
+* Donate
+
+
+Database Design
+     The scope of information maintained in the system is illustrated using an entity relationship diagram (ERD), as shown in Figure 8. The ERD shows three (3) primary entities consisting of the scholar, benefactor, and organization. Every entity plays an essential role in the system. Every user will be categorized based on their scholar and benefactor roles. The scholar includes additional information that will be used for verification. Characteristics are also added for the scholar and benefactor roles, which include their geolocations, interests, ethnicity, and other identifying features to be processed by the recommendation system on AWS Sagemaker. The benefactor can donate to a student monetarily or in any other way to meet the student's school aid requirement. Students can also apply to organizations to receive grant funding or to participate in scholarships provided by the organization.
+  
+Figure 8. Database Design of Isko ni Juan Mobile Application
+
+
+Project Development
+     This section discusses the procedures followed on how the mobile application is developed based on the design specifications.
+
+
+Database Setup
+     Based on the database design of the system in Figure 8, the algorithm of the equivalent NoSQL Document Model for storing and retrieving data in DynamoDB includes:
+1. Set up and add data modeling in AWS Amplify 
+2. Create a table for Scholar, Benefactor, Organization, Campaign, Swipes, Information, Scholar Characteristics, Benefactor Characteristics, Donation, Swipes, Private Chats, Matches , and input the necessary field names and the types of the fields shown in Figure 8.
+3. Save and deploy the data model and copy the generated GraphQL schema
+4. Add GraphQL API and add the generated GraphQL schema into the local backend resources and provision it in the cloud.
+5. Access AWS AppSync to query, update, or publish data.
+
+
+Program Coding
+The algorithm for the Machine Learning Recommendation System includes:
+1. Collect user behavior (swipes) of benefactor and scholar
+2. Build the machine learning model using the collaborative filtering approach. The data will go through multiple dense layers with an Adam optimizer function and cross entropy loss function.
+3. The swipee will be an embedded vector in an embedding space using Word2Vec.
+4. Use a skip-gram algorithm and learn embeddings for all users
+5. The swiper taste is computed as the mean of the embeddings of the user they swipe.
+6. Test the machine learning model using the validation data
+7. Optimize the model with callback functions such as early stopping and model checkpoint.
+
+
+     The mobile application will be created using React Native with AWS Amplify, AWS AppSync, and AWS Sagemaker Studio. The following steps will be used to develop the mobile app:
+1. Initialize AWS amplify to integrate and setup the Amplify SDK inside the React Native app.
+2. Design and code the interface and functions for the React Native app.
+3. Design a database schema and data flow diagram.
+4. Import all the necessary libraries in the Visual Studio IDE, which includes React Native, Sagemaker, AppSync, TensorFlow, DynamoDB, S3, Cognito and Amplify.
+5. Add a GraphQL API using AWS AppSync to build data-driven React Native in real-time with offline capabilities easily.
+6. If the user is a student, a list of benefactors in the form of cards will display on the home page.
+7.  If the user is a philanthropist, a list of scholars in the form of cards will display on the home page.
+8. The list of benefactors or scholars will come from the custom recommendation engine from the AWS Sagemaker. AWS Sagemaker will get the preprocessed data from the AWS S3 and DynamoDB.
+9. The recommendation engine will train, deploy and host the trained model as an endpoint.
+10. If the student swipes right, the student will apply to be a scholar of the philanthropist listed on the card. It will send the data to AWS Sagemaker to analyze user behavior to personalize recommended philanthropists further.
+11. If the scholar swipes left, the scholar will not submit an application to the benefactor.
+12. If the philanthropist swipes right, the philanthropist will be eligible to donate to the student’s campaign. It will send the data to AWS Sagemaker to analyze user behavior to further personalize recommended philanthropists.
+13. If the philanthropist swipes left, the philanthropist will not be eligible to donate to the student’s campaign.
+14. If the user is a scholar, there will be an organization page where they can view the directory of organizations that offer scholarships. 
+
+
+Operation and Testing Procedures
+     The following procedure will be used to test the accuracy of the recommender system for scholars:
+1. Open the application Isko ni Juan using an Android device and sign in.
+2. The scholars will choose the philanthropist that they seek for help.
+3. The recommender system is trained using the information and activity of the user. The information and activity of the user will be the basis of machine learning in recommending philanthropists and scholarships. 
+4. The user will observe each time they use the application if the succeeding recommended philanthropists and scholarships are similar to the ones they are looking for.
+5. After using the application, compare the recommended philanthropist when the user first started using the application and after the user used the application. This will show if the machine learning is accurate in recommending philanthropists and scholarships to the user.
+     The following procedure will be used to test the accuracy of the recommender system for philanthropist:
+1. Open the application Isko ni Juan using an Android device and sign in.
+2. The philanthropist will choose the scholars that they want to help.
+3. The recommender system is trained using the information and activity of the user. The information and activity of the user will be the basis of the scholars that will be recommended to philanthropists. 
+4. The user will observe in their every use if the succeeding recommended scholars are similar to the ones they are looking for.
+5. After using the application, compare the recommended scholars when the user first started using the application and after the user used the application. This will show if the recommender system is accurate in recommending scholars to the philanthropists.
+     The following procedure will be used to operate the mobile application for the scholars account:
+1. Open the application Isko ni Juan using an Android device.
+2. The user will see the landing page where they are prompted to sign in. The users will input their credentials to access the mobile application.
+3. After the user successfully signed in, the user will be redirected to the application where they are presented with a philanthropist that if they swipe right they seek help from the currently displayed philanthropist or swipe left to look for other philanthropists. The user is also presented with tabs at the bottom of the application. The tabs are composed with the different functionalities: 
+   1. Philanthropist – where the user can swipe right if they seek help at the currently displayed philanthropist or swipe left if they seek to find other philanthropists.
+   2. Messages – this shows the list of philanthropists that also swiped right to the scholars. The following functionalities of the Messages tab are:
+      * Chat - this is the default communication of the scholar and philanthropist using text.
+      * Send Image - this will be used if the scholar intends to send an image.
+      * Send File - this will be used if the scholar intends to send a file.
+   3. Organizations – this is where the users can look and apply for scholarships from different organizations.
+   4. Notifications – this is where the user gets the notifications if the philanthropists they chose also swiped right to the user or there is a new scholarship being given out by an organization.
+4. After the top right corner of the application, the user can find a profile icon. After tapping the profile icon, the user will be redirected to the Profile page. The Profile page functionalities are:
+   1. Personal Information - this is where they user can change their credentials:
+      * Name
+      * Email Address
+      * Phone Number
+   2. Change Password - the user have the option to change the password of their account
+   3. Help and Support - if the user seeks for help or encounters any problem about the application, they can look at the frequently asked question about the app. If their question is not found, they can create a ticket that will be sent to the admins.
+   4. Privacy Policy - this states the privacy policy that is applied to the application in securing the data and information of the users.
+   5. Terms and Conditions - this states the terms and conditions that the user agrees to the app.
+   6. About - this explains the purpose of the application.
+   7. Sign Out - logs out on the application.
+5. After the user is done using the app, they can head to the Profile page and sign-out.
+6. Close the application and turn off the device.
+     The following procedure will be used to operate the mobile application for the philanthropists account:
+1. Open the application Isko ni Juan using an Android device.
+2. The user will see the landing page where they are prompted to sign in. The users will input their credentials to access the mobile application.
+3. After the user successfully signed in, the user will be redirected to the application where they are presented with a scholar that if they swipe right they want to help the currently displayed scholar or swipe left to look for other scholars. The user is also presented with tabs at the bottom of the application. The tabs are composed with different functionalities: 
+   1. Scholars – where the user can swipe right if they seek to help the currently displayed scholar or swipe left if they seek to find other scholars to help.
+   2. Messages – this shows the list of scholars that also swiped right to the philanthropist. The following functionalities of the Messages tab are:
+      * Chat - this is the default communication of the scholar and philanthropist using text.
+      * Send Image - this will be used if the philanthropist intends to send an image.
+      * Send File - this will be used if the philanthropist intends to send a file.
+      * Donate - this will be used if the philanthropist intends to send a monetary donation to the scholar.
+   3. Notifications – this is where the user gets the notifications if the scholar that they chose also swiped right to the user.
+4. After the top right corner of the application, the user can find a profile icon. After tapping the profile icon, the user will be redirected to the profile page. The profile page functionalities are as follows:
+   1. Personal Information - this is where they user can change their credentials:
+      * Name
+      * Email Address
+      * Phone Number
+   2. Change Password - the user have the option to change the password of their account
+   3. Help and Support - if the user seeks for help or encounters any problem about the application, they can look at the frequently asked question about the app. If their question is not found, they can create a ticket that will be sent to the admins.
+   4. Privacy Policy - this states the privacy policy that is applied to the application in securing the data and information of the users.
+   5. Terms and Conditions - this states the terms and conditions that the user agrees to the application.
+   6. About - this explains the purpose of the application.
+   7. Sign Out - logs out on the application
+5. After the user is done using the app, they can head to the Profile page and sign-out.
+6. Close the application and turn off the device.
+
+
+________________
+
+
+Table 1.
+Accuracy Testing Procedure of the Mobile Application
+
+
+User Classification
+	Recommendations
+	Steps to be Taken
+	Expected Output
+	Scholar
+ 
+	 
+1. Philanthropists
+2. Scholarships from organizations 
+ 
+ 
+ 
+ 
+	1. Open the application Isko ni Juan using an Android device and sign in.
+2. The scholar will decide to swipe right if they seek help from the philanthropist or swipe left to look for other philanthropists.
+3. The scholar will now wait if their chosen philanthropist will also swipe right to them.
+	After the scholar and philanthropist swiped right to each other. They can now communicate with each other through messaging.
+
+
+
+
+	Philanthropist
+ 
+	
+
+1. Scholars
+ 
+	1. Open the application Isko ni Juan using an Android device and sign in.
+2. The philanthropist will decide to swipe right if they want to help the scholar or swipe left to look for other scholars to help.
+3. The philanthropist will now wait if their chosen scholar will also swipe right to them.
+	After the philanthropist and scholar swiped right to each other. They can now communicate with each other through messaging. The philanthropist can help the scholar according to what they can only give monetarily or non-monetary.
+
+
+
+
+	
+
+
+
+Evaluation Procedure
+      The evaluation instrument that will be used to assess the acceptability of the system was adapted from the ISO 25010 titled “Systems and software engineering – Systems and software Quality Requirements and Evaluation (SQuaRE) – System and software quality models.”
+      The following procedure will be conducted to evaluate the acceptability of the developed mobile application:
+1. Invite purposively selected respondents composed of students, small-scale philanthropists, organizations, mobile application developers, and machine learning engineers.
+2. Demonstrate and explain how to operate the mobile application.
+3.  The evaluators will be asked to try using the mobile application using different dashboards.
+4. The evaluators will be requested to evaluate the mobile application individually based on the given evaluation sheets using a 4-point Likert Scale shown in Table 2.
+5. The accomplished evaluation sheets will be processed, and the data gathered will be tabulated to determine the mean ratings.
+6. The adjectival ratings for the mean ratings will also be interpreted using the Likert Scale shown in Table 2.
+
+
+
+
+
+
+
+
+
+
+Table 2. 
+Likert’s Scale
+
+
+Scale
+	Adjectival Rating
+	Range
+	4
+	Highly Acceptable
+	3.4 – 4.0
+	3
+	Very Acceptable
+	2.6 – 3.3
+	2
+	Acceptable
+	1.8 – 2.5
+	1
+	Not Acceptable
+	1.0 – 1.7
+	
+
+
+
+REFERENCES
+ABS-CBN News. (2010, June 13). Only half of working students finish college: CHED. ABS-CBN News. https://news.abs-cbn.com/lifestyle/youth/06/13/10/only-half-working-students-finish-college-ched
+
+
+Accepting GCash payments. (n.d.). PayMongo. https://developers.paymongo.com/docs/accepting-gcash-payments?campaign=18966073438
+
+
+Adhikary, B. K., Kutsuna, K., & Hoda, T. (2018). Crowdfunding—A Conceptual Talk. SpringerBriefs in Economics, 1–7. https://doi.org/10.1007/978-981-13-1522-0_1
+
+
+Ali, S. M., & Ghani, I. (2012). A review on recommender techniques, systems and evaluation metrics. Science International-Lahore, 4, 503-511.
+
+
+Amazon Web Services. (n.d.). Amazon Cognito Pricing. Amazon Web Services, Inc. https://aws.amazon.com/cognito/pricing/
+
+
+Amazon Web Services. (n.d.). Amazon DynamoDB. (n.d.). Amazon Web Services, Inc. https://aws.amazon.com/dynamodb/
+
+
+Amazon Web Services. (n.d.). Amazon S3. (n.d.). Amazon Web Services, Inc. https://aws.amazon.com/s3/
+
+
+Amazon Web Services. (n.d.). Amazon SageMaker. Amazon Web Services, Inc. https://aws.amazon.com/pm/sagemaker/
+
+
+Amazon Web Services. (n.d.). Amazon SNS pricing. Amazon Web Services, Inc. https://aws.amazon.com/sns/pricing/
+
+
+Amazon Web Services. (n.d.). AWS Appsync pricing. Amazon Web Services, Inc. https://aws.amazon.com/appsync/pricing/
+
+
+Amazon Web Services. (n.d.). AWS Amplify pricing. Amazon Web Services, Inc. https://aws.amazon.com/amplify/pricing/
+
+
+Antonenko, P. D., Lee, B. R., & Kleinheksel, A. J. (2014). Trends in the crowdfunding of educational technology startups. TechTrends, 58(6), 36–41.
+
+
+Aparna. (2021, December 27). Why is JavaScript Mobile App Development Framework the Best Pick in 2022? MobileAppAaily. https://www.mobileappdaily.com/javascript-mobile-app-development
+
+
+Athithan, V. (2022, September 28). What is Cognito in AWS? Cloud Academy. https://cloudacademy.com/blog/what-is-cognito-in-aws/
+
+
+Awati, R., & Carty, D. (2021, June 1). Amazon Cognito. SearchAWS. https://www.techtarget.com/searchaws/definition/Amazon-Cognito
+
+
+Bentrim, E., Sousa-Peoples, K., Kachellek, G., & Powers, W. (2013). Assessing Learning Outcomes: Student Employees in Student Affairs. About Campus: Enriching the Student Learning Experience, 18(1), 29–32. https://doi.org/10.1002/abc.21110
+
+
+Bermudez, A. (2022). Higher Education Scholarship Program In The Philippines: The Case Of Caraga State University–-Cabadbaran Campus. Higher Education: From Region to Nation for the Community.
+
+
+Bishop, C. M., & Nasrabadi, N. M. (2006). Pattern recognition and machine learning (Vol. 4, No. 4, p. 738). New York: springer.
+
+
+Bøe, C. (2007). Collaborative filtering for recommending movies (Master's thesis, Institutt for datateknikk og informasjonsvitenskap).
+
+
+Bobadilla, J., Serradilla, F., & Bernal, J. (2010). A new collaborative filtering metric that improves the behavior of recommender systems. Knowledge-Based Systems, 23(6), 520-528.
+
+
+Brandon, J. (2020, January 19).What is AWS AppSync? techradar.pro. Retrieved December 6, 2022, from https://www.techradar.com/news/what-is-aws-appsync
+
+
+British Council. (n.d.). Transnational Education in the Philippines: Opportunities and Challenges. In British Council. https://www.britishcouncil.ph/sites/default/files/transnational_education_in_the_philippines_opportunities_and_challenges.pdf
+
+
+Brun, A., Castagnos, S., & Boyer, A. (2009, February). A positively directed mutual information measure for collaborative filtering. In 2nd International Conference on Information Systems and Economic Intelligence-SIIE 2009 (pp. 943-958). IHE éditions Tunis-Tunisie.
+
+
+Cambridge Dictionary. (2022, November 9). small-scale definition: 1. small, especially when compared to other things like it: 2. small, especially when compared to. . .. Learn more.      https://dictionary.cambridge.org/dictionary/english/small-scale
+
+
+Cambridge University Press. (2022). scholarship meaning: 1. serious, detailed study: 2. an amount of money given by a school, college, university, or other. . .. Learn more. In Cambridge Dictionary. https://dictionary.cambridge.org/us/dictionary/english/scholarship
+
+
+Cambridge Dictionary. (2022a, November 9). philanthropist definition: 1. a person who helps  the poor, especially by giving them money: 2. a person who helps the poor. . .. Learn more. https://dictionary.cambridge.org/dictionary/english/philanthropist
+
+
+Cambridge University Press. (n.d.-b). work-study. In Cambridge Dictionary. Retrieved November 21, 2022, from https://dictionary.cambridge.org/us/dictionary/english/work-study
+
+
+Chaney, D. (2019). A principal–agent perspective on consumer co-production: Crowdfunding and the redefinition of consumer power. Technological Forecasting and Social Change, 141, 74–84. https://doi.org/10.1016/j.techfore.2018.06.013
+
+
+Chen, X., Yin, L., Fan, Y., Song, L., Ji, T., Liu, Y., Tian, J., & Zheng, W. (2020, January). Temporal evolution characteristics of PM2.5 concentration based on continuous wavelet transform. Science of the Total Environment, 699, 134244. https://doi.org/10.1016/j.scitotenv.2019.134244
+
+
+CNN Philippines. (2022, September 7). CHED scraps ‘study now, pay later’ program due to low repayment rate. CNN Philippines. https://www.cnnphilippines.com/news/2022/9/7/CHED-scraps-study-now-pay-later-program.html?fb
+
+
+Codesphere. (2022, June 27). Building Your First React Native Application with Expo. Medium. https://medium.com/codesphere-cloud/building-your-first-react-native-application-with-expo-875f3c03d4eb
+
+
+Colasanti, N., Frondizi, R., & Meneguzzo, M. (2018). Higher education and stakeholders’ donations: successful civic crowdfunding in an Italian university. Public Money &Amp; Management, 38(4), 281–288. https://doi.org/10.1080/09540962.2018.1449471
+
+
+Colistra, R., & Duvall, K. (2017). Show Me the Money: Importance of Crowdfunding Factors on Backers’ Decisions to Financially Support Kickstarter Campaigns. Social Media + Society, 3(4), 205630511773694. https://doi.org/10.1177/2056305117736942
+
+
+Craven, J. Universities explore crowdfunding, social media to raise money. USA Today. Retrieved from https://www. usatoday. com/story/news/nation/2013/05/24/collegecrowdfunding-social-media-fundraising/2358503.
+crowdfunding. (2022). In The Merriam-Webster Dictionary. https://www.merriam-webster.com/dictionary/crowdfunding
+
+
+Crowdfunding: What It Is, How It Works, Popular Websites. (2022, July 14). Investopedia. https://www.investopedia.com/terms/c/crowdfunding.asp
+
+
+Darolia, R. (2014). Working (and studying) day and night: Heterogeneous effects of working on the academic performance of full-time and part-time students. Economics of Education Review, 38, 38–50. https://doi.org/10.1016/j.econedurev.2013.10.004
+
+
+Ding, Y., Tian, X., Yin, L., Chen, X., Liu, S., Yang, B., & Zheng, W. (2019). Multi-scale Relation Network for Few-Shot Learning Based on Meta-learning. Lecture Notes in Computer Science, 343–352. https://doi.org/10.1007/978-3-030-34995-0_31
+
+
+Fabula, J. K. (2022, May 31). How To Become a Scholar: An Ultimate Guide to Scholarship Programs for Filipino Students. FilipiKnow. https://filipiknow.net/scholarship-programs-philippines/
+
+
+Farrokhvar, L., Ansari, A., & Kamali, B. (2018, October 3). Predictive models for charitable giving using machine learning techniques. PLOS ONE, 13(10), e0203928. https://doi.org/10.1371/journal.pone.0203928
+
+
+Fernandez, D. (2022, September 7). CHEd halts Study Now, Pay Later Program. INQUIRER.Net. https://newsinfo.inquirer.net/1659767/ched-halts-study-now-pay-later-program
+
+
+França, J. M. S., & Soares, M. S. (2015). SOAQM: Quality Model for SOA Applications based on ISO 25010. Proceedings of the 17th International Conference on Enterprise Information Systems. https://doi.org/10.5220/0005369100600070
+
+
+Furr, S. R., & Elling, T. W. (2000). The Influence of Work on College Student Development. NASPA Journal, 37(2), 454–470. https://doi.org/10.2202/1949-6605.1108
+
+
+Gackenheimer, C. (2015). Introduction to React (1st ed.). Apress.
+
+
+Ganem, N. M., & Manasse, M. (2011). The Relationship between Scholarships and Student Success: An Art and Design Case Study. Education Research International, 2011, 1–8. https://doi.org/10.1155/2011/743120
+
+
+Geiger, W. (2022, September 9). Types of Scholarships Directory. Scholarships360. https://scholarships360.org/scholarships/types-of-scholarships/ 
+
+
+Gerber, E. M., Hui, J. S., & Kuo, P.-Y. (2012). Crowdfunding: Why People Are Motivated to Post and Fund Projects on Crowdfunding Platforms. Retrieved from http://www.juliehui.org/wp-content/uploads/2013/04/CSCW_Crowdfunding_Final.pdf.
+
+
+Giva, Inc. (n.d.). Effects of Scholarships on Student Success. Giva. Retrieved November 11, 2022, from https://www.givainc.com/blog/index.cfm/2015/1/23/effects-of-scholarships-on-student-success
+
+
+Goroshit, M. (2018). Academic procrastination and academic performance: An initial basis for intervention. Journal of Prevention &Amp; Intervention in the Community, 46(2), 131–142. https://doi.org/10.1080/10852352.2016.1198157
+
+
+Gonzalez, C. J. M. ISKOLAR NG BAYAN LAW: A BAND-AID ON A GAPING WOUND.
+
+
+Gross, J. P. K., Hossler, D., & Ziskin, M. (2007). Institutional Aid and Student Persistence: An Analysis of the Effects of Institutional Financial Aid at Public Four-Year Institutions. Journal of Student Financial Aid, 37(1). https://doi.org/10.55504/0884-9153.1076
+
+
+Gualdi, S., Medo, M., & Zhang, Y. C. (2013). Crowd avoidance and diversity in socio-economic systems and recommendations. EPL (Europhysics Letters), 101(2), 20008.
+
+
+Guimba, W. D., Alico, J. C., & Taib, A. B. (2015). Problems Experienced by College Student Scholars. International Journal of Innovation and Research in Educational Sciences. Publisher: Timeline Publication Pvt. Ltd,. ISSN, 2349-5219.
+
+
+Haas P, Blohm I, Leimeister J (2014) An empirical taxonomy of crowdfunding intermediaries. Retrieved 20 November 2022, from http://www.crowdinvesting.jura.uni-muenchen.de/dokumente/cro wdfundingintermediaries.pdf
+
+
+Hanna, K. T. (2022, June 9). nonprofit organization (NPO). WhatIs.com. https://www.techtarget.com/whatis/definition/non-profit-organization-NPO
+
+
+Hayes, B. (2020, July 14). Most Popular Integrated Development Environments (IDEs) Used by Data Scientists. Business Over Broadway. https://businessoverbroadway.com/2020/07/14/most-popular-integrated-development-environments-ides-used-by-data-scientists/
+
+
+
+
+Heller, M. (2022, July 8). What is Visual Studio Code? Microsoft’s extensible code editor. InfoWorld. https://www.infoworld.com/article/3666488/what-is-visual-studio-code-microsofts-extensible-code-editor.html
+
+
+Herment, N. (2022, September 29). Using Expo to build a mobile app - NearForm - NearForm. NearForm Enterprise Software Solution Development. https://www.nearform.com/blog/using-expo-to-build-a-mobile-app/
+
+
+Hobbs, J., Grigore, G., & Molesworth, M. (2016). Success in the management of crowdfunding projects in the creative industries. Internet Research, 26(1), 146–166. https://doi.org/10.1108/intr-08-2014-0202
+
+
+javaTpoint. (n.d.). What is AWS Amplify. www.javatpoint.com. Retrieved December 5, 2022, from https://www.javatpoint.com/what-is-aws-amplify
+
+
+Jin, H., Zhang, P., Dong, H., Shao, M., & Zhu, Y. (2021, September 17). Personalized Scholar Recommendation Based on Multi-Dimensional Features. MDPI. https://www.mdpi.com/2076-3417/11/18/8664/htm 
+
+
+Jordan, J. (2022, June 15). Can You Use React for Mobile App Development? NarraSoft. https://narrasoft.com/can-you-use-react-for-mobile-app-development/
+
+
+Kahrilas, N. (2020, July 7). What Philanthropy Looks Like on the Small Scale. Thrive Global. https://community.thriveglobal.com/what-philanthropy-looks-like-on-the-small-scale/
+
+
+Kasworm, C. (2010). Adult workers as undergraduate students. Understanding the working college student: New research and its implications for policy and practice, 23-42.
+
+
+Kenthapadi, K., Le, B., & Venkataraman, G. (2017, August). Personalized Job Recommendation System at LinkedIn: Practical Challenges and Lessons Learned. ResearchGate. https://www.researchgate.net/publication/319285276_Personalized_Job_Recommendation_System_at_LinkedIn_Practical_Challenges_and_Lessons_Learned 
+
+
+Kleeman, F., Voss, G. and Rieder, K. (2008), Un(der)paid innovators: the commercial utilization of consumer work through crowdsourcing. Science, Technology and Innovation Studies, 4, 1, pp. 5–26.
+
+
+Lohit, Arka., & Kaur, P. (2022). Blockchain Application in the Elimination of Scholarship-based Manipulation. International Journal for Research in Applied Science and Engineering Technology, 10(5), 2288–2294. https://doi.org/10.22214/ijraset.2022.42769
+
+
+Liak, J. (2021, November 11). Introducing EAS. Exposition. https://blog.expo.dev/introducing-eas-395d4809cc6f
+
+
+Macht, S. and Weatherston, J. (2015), Academic research on crowdfunders: what’s been done and what’s to come? Strategic Change, 24, 2, pp. 191–205.
+Mahuron, S. (2018, June 29). How Will a Scholarship Help Achieve Your Education & Career Goals? Work - Chron.com. https://work.chron.com/scholarship-achieve-education-career-goals-9040.html
+
+
+Massimi, M., & Neustaedter, C. (2014). Moving from talking heads to newlyweds. Proceedings of the 2014 Conference on Designing Interactive Systems. https://doi.org/10.1145/2598510.2598570
+
+
+Mazlan, S. I., & Arbaiy, N. (2022). Decision Support System for Scholarship Scheme Grant (Dermasiswazah Pelajar). Applied Information Technology And Computer Science, 3(1), 671-684.
+
+
+McNee, S. M., Riedl, J., & Konstan, J. A. (2006, April). Being accurate is not enough: how accuracy metrics have hurt recommender systems. In CHI'06 extended abstracts on Human factors in computing systems (pp. 1097-1101).
+
+
+Merriam-Webster. (n.d.). scholarship. In The Merriam-Webster.com Dictionary. Retrieved October 10, 2022, from https://www.merriam-webster.com/dictionary/scholarship
+
+
+Methner, A. (2022, October 28). SQL to Mobile App: Use Your Data More Efficiently. Open as App. https://openasapp.com/sql-to-app/
+
+
+Miller, M. K., Mandryk, R. L., Birk, M. V., Depping, A. E., & Patel, T. (2017). Through the Looking Glass. Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. https://doi.org/10.1145/3025453.3025548
+
+
+Morozov, S., & Zhong, X. (2013, June). The evaluation of similarity metrics in collaborative filtering recommenders. In Hawaii University International Conferences (Vol. 15, pp. 102-118).
+
+
+Muhammed-Shittu, A. R. B. (2019). An investigation of the impact of the scholarship types on academic procrastination among the university students. Hungarian Educational Research Journal, 9(4), 668–688. https://doi.org/10.1556/063.9.2019.4.55
+
+
+Murtagh, T. (2021, April 13). The Rewarding Benefits of Applying to Scholarships. Honor Society - Official Honor Society® Website. https://www.honorsociety.org/articles/rewarding-benefits-applying-scholarships
+
+
+Mustafeez, A. Z. (n.d.). What is Visual Studio Code? Educative: Interactive Courses for Software Developers. Retrieved November 19, 2022, from https://www.educative.io/answers/what-is-visual-studio-code
+
+
+Nayak, M. (2021, October 7). How scholarships impact lives of students. Scholarship Alerts. https://www.buddy4study.com/article/how-scholarships-impact-lives-of-students
+
+
+News, Student News & Resources (Ed.). (2021, February 19). Wondering Why Scholarships Are Important? Post University. https://post.edu/blog/wondering-why-scholarships-are-important/
+
+
+Ni, X., Yin, L., Chen, X., Liu, S., Yang, B., & Zheng, W. (2019). Semantic representation for visual reasoning. MATEC Web of Conferences, 277, 02006. https://doi.org/10.1051/matecconf/201927702006
+
+
+Oh, S. W., & Kim, H. G. (2017). Crowdfunding performance: The effect of social capital and the mediating role of electronic word-of-mouth. The Journal of Internet Electronic Commerce Resarch, 17(1), 155-169.
+
+
+Pascarella, E. T., & Terenzini, P. T. (2005). How College Affects Students: A Third Decade of Research. Volume 2. Jossey-Bass, An Imprint of Wiley. 10475 Crosspoint Blvd, Indianapolis, IN 46256.
+
+
+Pedamkar, P. (2022, November 10). What is AWS Lambda? EDUCBA. https://www.educba.com/what-is-aws-lambda/
+
+
+Pike, G. R., Kuh, G. D., & Massa-McKinley, R. C. (2008). First-Year Students’ Employment, Engagement, and Academic Achievement: Untangling the Relationship between Work and Grades. NASPA Journal, 45(4), 560–582. https://doi.org/10.2202/1949-6605.2011
+
+
+Polillo, R. (2012). Quality Models for Web [2.0] Sites: A Methodological Approach and a Proposal. Current Trends in Web Engineering, 251–265. https://doi.org/10.1007/978-3-642-27997-3_25
+
+
+Prasanthi. (2022, April 30). What is AWS SNS? Mindmajix.  Retrieved December 5, 2022, from https://mindmajix.com/aws-sns
+
+
+Preis, T., Moat, H. S., Stanley, H. E., & Bishop, S. R. (2012, April 5). Quantifying the Advantage of Looking Forward. Scientific Reports, 2(1). https://doi.org/10.1038/srep00350
+
+
+Rashid, M. A., Deo, K., Prasad, D., Singh, K., Chand, S., & Assaf, M. (2020b). TEduChain: a blockchain-based platform for crowdfunding tertiary education. The Knowledge Engineering Review, 35. https://doi.org/10.1017/s0269888920000326
+
+
+Ravindranath, H. (2022, November 10). The Most Complete Guide for React Navigation. CopyCat Blog. https://www.copycat.dev/blog/react-js-navigation/
+
+
+Rebeś, P. (2020, June 15). Software Quality Standards—How and Why We Applied ISO 25010. https://www.monterail.com/blog/software-qa-standards-iso-25010
+
+
+Red Hat. (n.d.). What is GraphQL? Retrieved November 17, 2022, from https://www.redhat.com/en/topics/api/what-is-graphql
+
+
+Ren, Y., Ren, Y., Li, G., & Zhou, W. (2011). Automatic generation of recommendations from data: a multifaceted survey. Deakin University, School of Information Technology.
+
+
+Resnick, P., Iacovou, N., Suchak, M., Bergstrom, P., & Riedl, J. (1994). GroupLens. Proceedings of the 1994 ACM Conference on Computer Supported Cooperative Work  - CSCW ’94. https://doi.org/10.1145/192844.192905
+
+
+Reyes, J. (2022, May 10). Build a Swiper in React Native: A Step-by-Step Guide. Waldo Blog. https://www.waldo.com/blog/react-native-swiper
+
+
+Reynolds, R. (2022, March 26). The Impact of Affordability. TEL Education. https://www.tel-education.org/the-impact-of-affordability/
+
+
+Rizvić, H. (2020, June 5). What is SageMaker Studio? iOLAP. Retrieved December 6, 2022, from https://iolap.com/blog/what-is-sagemaker-studio/
+
+
+Rynearson, A., Miller, M., & Gartner, J. (2019, June). Need-Based Scholarship Program: Who is Applying, Who is Successful, and Who is Not Applying?. In American Society of Engineering Education.
+
+
+Ryu, S., & Kim, Y. G. (2018). Money is not everything: A typology of crowdfunding project creators. The Journal of Strategic Information Systems, 27(4), 350–368. https://doi.org/10.1016/j.jsis.2018.10.004
+
+
+Sandlund, J. The importance of bringing crowdfunding to higher education. TheCrowdCafe. Com.
+
+
+Sauermann, H., Franzoni, C., & Shafi, K. (2019). Crowdfunding scientific research: Descriptive insights and correlates of funding success. PloS one, 14(1), e0208384.
+
+
+Saxton, G. D., & Wang, L. (2014). The social network effect: The determinants of giving through social media. Nonprofit and voluntary sector quarterly, 43(5), 850-868.
+
+
+Scheid, R. M. (2021, February 7). Machine Learning and Philanthropy: 3 Ways to Advance Giving with Machine Learning. https://www.linkedin.com/pulse/machine-learning-philanthropy-3-ways-advance-giving-randy-scheid-mpa 
+Scholarships: all you need to know. (n.d.). ScholarshipPortal. https://www.scholarshipportal.com/article/scholarships-all-you-need-to-know
+
+
+Shapir, M. (2022, March 30). React Native for Mobile Application Development: Why Use It? Medium. https://medium.com/swlh/react-native-for-mobile-application-development-why-use-it-f83d7cba765
+
+
+Sharma, N. (2019, August 22). Recommender Systems with Python — Part I: Content-Based Filtering. Heartbeat. https://heartbeat.comet.ml/recommender-systems-with-python-part-i-content-based-filtering-5df4940bd831 
+
+
+Shneor, R., Zhao, L., & Flåten, B. T. (2020). Introduction: From Fundamentals to Advances in Crowdfunding Research and Practice. Advances in Crowdfunding, 1–18. https://doi.org/10.1007/978-3-030-46309-0_1
+
+
+Solemon, B., Ariffin, I., Din, M. M., & Anwar, R. M. (2013). A review of the uses of crowdsourcing in higher education. International Journal of Asian Social Science, 3(9), 2066-2073.
+
+
+Stack Overflow Developer Survey 2021. (2021). Stack Overflow. https://insights.stackoverflow.com/survey/2021
+
+
+Sundar, P. (2019, August 15). Importance of small- scale philanthropy. https://www.academia.edu/40090132
+
+
+Sundel, H. H., Zelman, W. N., Weaver, C. N., & Pasternak, R. E. (1978). Fund raising: Understanding donor motivation. Social Work, 23(3), 233-236.
+
+
+Steigenberger, N. (2017). Why supporters contribute to reward-based crowdfunding. International Journal of Entrepreneurial Behavior &Amp; Research, 23(2), 336–353. https://doi.org/10.1108/ijebr-04-2016-0117
+
+
+Taft, D. K. (2021, February 16). Microsoft VS Code: Winning developer mindshare. SearchSoftwareQuality. https://www.techtarget.com/searchsoftwarequality/news/252496429/Microsoft-VS-Code-Winning-developer-mindshare
+
+
+technopedia. (2017, January 18). Key Value Store. Technopedia. https://www.techopedia.com/definition/26284/key-value-store
+
+
+The Upwork Team (Ed.). (2021, April 6). What Content-Based Filtering is and Why You Should Use It. Upwork. https://www.upwork.com/resources/what-is-content-based-filtering
+
+
+Thies, F., Wessel, M., & Benlian, A. (2016). Effects of social interaction dynamics on platforms. Journal of Management Information Systems, 33(3), 843-873.
+
+
+Tomczak, A., & Brem, A. (2013). A conceptualized investment model of crowdfunding. Venture Capital, 15(4), 335–359. https://doi.org/10.1080/13691066.2013.847614
+
+
+Tury, K. (n.d.). Nonprofit Organizations (Definition and Examples) | Learning to Give. Nonprofit Organizations (Definition and Examples) | Learning to Give. Retrieved December 6, 2022, from https://www.learningtogive.org/resources/nonprofit-organizations-definition-and-examples
+
+
+Vaniukov, S. (2022, February 20). Most Used IDEs For Software Development: Overview For 2022. Softermii. https://www.softermii.com/blog/top-ides-for-software-development
+
+
+Ventura. Conde de Deus, R. (2021, March 30). Mobile Crowdfunding | Estudo Geral. https://estudogeral.sib.uc.pt/handle/10316/93901
+
+
+Wang, B., Wu, W., Zheng, W., Liu, Y., & Yin, L. (2020). Recommendation Algorithm of Crowdfunding Platform Based on Collaborative Filtering. Journal of Physics: Conference Series, 1673(1), 012030. https://doi.org/10.1088/1742-6596/1673/1/012030
+
+
+What is a Scholarship. (n.d.). University of South Alabama. Retrieved October 10, 2022, from https://www.southalabama.edu/departments/financialaffairs/scholarships/whatisascholarship.html
+
+
+Webb Farley, K. E. (2017, November 16). Shifting Notions of Philanthropy: Themes in Scholarship and Practice. PS: Political Science &Amp; Politics, 51(01), 48–53. https://doi.org/10.1017/s104909651700138x
+
+
+Wilinski, R. (2022, April 11). What Is DynamoDB? Ultimate Intro for Beginners. Dynobase. https://dynobase.dev/what-is-dynamodb/
+
+
+Wit, J. (2008). Evaluating recommender systems: an evaluation framework to predict user satisfaction for recommender systems in an electronic programme guide context (Master's thesis, University of Twente).
+
+
+Zabala, B. A., & Gutierrez, M. P. (2017). Economically Deprived and Marginalized Scholars: Their Lifestyles, Experiences, Challenges and Aspirations. OALib, 04(02), 1–14. https://doi.org/10.4236/oalib.1103395
+
+
+Zhao, Y., Harris, P., & Lam, W. (2019). Crowdfunding industry—History, development, policies, and potential issues. Journal of Public Affairs, 19(1), e1921. https://doi.org/10.1002/pa.1921
+
+
+Zhong, Z. J., & Lin, S. (2017). The antecedents and consequences of charitable donation heterogeneity on social media. International Journal of Nonprofit and Voluntary Sector Marketing, 23(1), e1585. https://doi.org/10.1002/nvsm.1585
+
+
+Ziegler, C. N., McNee, S. M., Konstan, J. A., & Lausen, G. (2005, May). Improving recommendation lists through topic diversification. In Proceedings of the 14th international conference on World Wide Web (pp. 22-32).
+
+
+Appendix A
+SAMPLE EVALUATION SHEET
+Technological University of the Philippines
+College of Science
+Computer Studies Department
+Name (Optional): _____________________________        Date: ________________
+What best describes you? (Student/Philanthropist/Machine Learning Engineer/Mobile App Developer): ______________________________
+Direction: Please encircle the appropriate number of your rating to evaluate the project entitled “Isko Ni Juan: Mobilizing Small-Scale Philanthropy to Finance College Students Using Machine Learning” using the scale below:
+4 – Highly Acceptable        3 – Very Acceptable        2 – Acceptable         1 – Not Acceptable
+
+
+Mobile Application
+	Criteria
+	Rating
+	1. Functionality Suitability
+	1. The mobile application is fit to attain the target functionalities. (suitability)
+	4
+	3
+	2
+	1
+	2. The functionalities applied in the mobile application meets the specified tasks and user objectives. (completeness)
+	4
+	3
+	2
+	1
+	3. The mobile application provides the correct results with the needed degree of precision. (correctness)
+	4
+	3
+	2
+	1
+	4. The functionalities included in the mobile application are all fully functional. (appropriateness) 
+	4
+	3
+	2
+	1
+	2. Performance Efficiency
+	1. The mobile application is able to process and respond to the user in a timely manner. (time behavior)
+	4
+	3
+	2
+	1
+	2. The resources used in the mobile application makes it efficient and used appropriately. (resource utilization)
+	4
+	3
+	2
+	1
+	3. The maximum limit of the processes in the mobile application is reasonable. (capacity)
+	4
+	3
+	2
+	1
+	3. Compatibility
+	1. The mobile application can perform the different functionalities even if there are multiple users using the mobile application using different devices. (co-existence)
+	4
+	3
+	2
+	1
+	2. The mobile application can send and receive information from other users real time. (interoperability)
+	4
+	3
+	2
+	1
+	4. Usability
+	1. The users recognize that the mobile application fulfills their needs. (appropriateness recognizability)
+	4
+	3
+	2
+	1
+	2. The mobile application can be a way for users to attain specified goals of effective learning, efficiently, risk-free, and satisfied in their specific use (learnability)
+	4
+	3
+	2
+	1
+	3. The mobile application has attributes such as clear, logical, and effective organization of contents that make it easy for the intended users to understand, operate, and control. (operability)
+	4
+	3
+	2
+	1
+	4. The mobile application protects users against making errors. On-screen and well-written instructions are available. (user error protection)
+	4
+	3
+	2
+	1
+	5. The mobile application showcases a satisfying experience for the user. (user interface aesthetics)
+	4
+	3
+	2
+	1
+	6. People with a wide knowledge and ability can use the mobile application to attain a specific goal based on their usage. (accessibility)
+	4
+	3
+	2
+	1
+	5. Reliability
+	1. The mobile app is reliable in frequent usage. (maturity)
+	4
+	3
+	2
+	1
+	2. The mobile application can perform the functionalities needed even if there are errors (fault tolerance)
+	4
+	3
+	2
+	1
+	3. The mobile application can be accessed anytime and anywhere. (availability)
+	4
+	3
+	2
+	1
+	6. Security
+	1. The mobile application prevents unauthorized access to  the app. (integrity)
+	4
+	3
+	2
+	1
+	2. The mobile application explains to the user how the records are being used. (accountability)
+	4
+	3
+	2
+	1
+	3.  If the app creates a permanent record for a user, that record is secure and confidential. There is a provision for deleting the record when the information is no longer valuable in providing services. (confidentiality)
+	4
+	3
+	2
+	1
+	7. Maintainability
+	1. The source of failure can be identified when errors occur. (analyzability)
+	4
+	3
+	2
+	1
+	2. Improvements and corrections can be easily applied on the mobile application. (modifiability)
+	4
+	3
+	2
+	1
+	8. Portability
+	1. The mobile application supports Android smartphone devices using Android Operating System with version 5.0 and above. (adaptability)
+	4
+	3
+	2
+	1
+	2. The mobile application can be installed on any Android smartphone and iOS devices. (installability)
+	4
+	3
+	2
+	1
+	
+
+Comments/Suggestions:
+ 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	
+
+	 
+	 
+	 
+	 
+	RESEARCHER’S PROFILE
+
+
+MIGUEL ANDREW S. BRACAMONTE  
+219 Peacock St. CountrySide, Sun Valley Parañaque City
+0916-302-7805
+miggydrew1441@gmail.com
+   
+PERSONAL INFORMATION
+	Age:  
+	21
+	Sex:
+	Male
+	Birthday: 
+	May 3, 2001
+	Civil Status:
+	Single
+	Citizenship:
+	Filipino
+	 
+KNOWLEDGE AND SKILLS
+
+
+* Knowledgeable in C, Python, Java, React Native, HTML, CSS, Javascript.
+* Knowledgeable in Data Science, Web Development, and Mobile Application Development.
+	
+
+ACCOMPLISHED PROJECTS
+	* Four Legged (Web Project)
+Back End Developer
+Jun 2022-July 2022
+	
+
+EDUCATIONAL ATTAINMENT
+	Tertiary:
+	Technological University of The Philippines
+Ayala Blvd, Ermita, Manila
+Bachelor of Science in Computer Science
+	Secondary:
+	Arellano University (Apolinario Mabini Campus)
+Taft Avenue, Corner Menlo, Pasay, Manila
+2017-2019
+
+
+Don Bosco High School Parañaque
+Don Bosco, El Dorado, Parañaque
+2013-2017
+	Primary:
+	Sun Valley Elementary School
+ELIZABETH AVE, Sun Valley Dr, Parañaque
+2007-2013
+
+
+	
+
+RAMIL S. COBILLA JR.  
+38 Branches St., Project 8, Sangandaan, Quezon City
+0966-271-2988
+ramil.cobilla@gmail.com
+   
+PERSONAL INFORMATION
+	Age:
+	21
+	Sex:
+	Male
+	Birthday:
+	December 20, 2000
+	Civil Status:
+	Single
+	Citizenship:
+	Filipino
+	 
+KNOWLEDGE AND SKILLS
+
+
+* Knowledgeable in C, C#, Javascript, Python, Flask, SQL, React Js, React Native, Astro, TRPC and GraphQL
+* Knowledgeable in Web Development, Machine Learning, Data Science, and Mobile Development
+	
+
+ACCOMPLISHED PROJECTS
+
+
+* Poetry Generator (Web Project)
+Lead Developer & Machine Learning Engineer
+April 2022- May 2022
+* Sixth Sense (Web Project)
+Lead Developer & Machine Learning Engineer
+June 2022 - July 2022
+	
+
+EDUCATIONAL ATTAINMENT
+	Tertiary:
+	Technological University of The Philippines
+Ayala Blvd, Ermita, Manila
+Bachelor of Science in Computer Science
+	Secondary:
+	STI College Muñoz
+Congressional Ave, Munoz, Quezon City
+2017 - 2019
+
+
+Ismael Mathay Senior High School
+Branches St, Sangandaan Quezon City
+2013 - 2017
+	Primary:
+	GSIS Village Elementary School
+Premium St, Sangandaan, Quezon City
+2007 - 2013
+	JHON CARLO P. DICHOSO  
+Blk 41 Lot 9 Celerina Homes Capricornus St. Caloocan City
+0956-027-5799
+jhoncarlo.dichoso@tup.edu.ph
+   
+PERSONAL INFORMATION
+	Age:
+	21
+	Sex:
+	Male
+	Birthday:
+	July 24, 2001
+	Civil Status:
+	Single
+	Citizenship:
+	Filipino
+	 
+KNOWLEDGE AND SKILLS
+
+
+* Knowledgeable in C, Python, Java, MySQL, React Native, HTML, CSS, Javascript, PHP, GraphQL, and Flask.
+* Knowledgeable in Machine Learning, Data Science, Web Development, and Mobile Application Development.
+	 
+ACCOMPLISHED PROJECTS
+	* Poetry Generator (Web Project)
+Lead Developer & Machine Learning Engineer
+April 2021- May 2021
+* Sixth Sense (Web Project)
+Lead Developer & Machine Learning Engineer
+June 2021 - July 2021
+	 
+EDUCATIONAL ATTAINMENT
+	Tertiary:
+	Technological University of The Philippines
+Ayala Blvd, Ermita, Manila
+Bachelor of Science in Computer Science
+	Secondary:
+	Caloocan City Business High School
+Sikatuna Ave, Barangay 172, Caloocan, Metro Manila
+2013-2019
+	Primary:
+	Urduja Elementary School
+Sikatuna Ave, Barangay 172, Caloocan, Metro Manila
+2007-2013
+	
+
+ALEXANDRE BENEDICT H. MIÑON  
+159 Int. 19 Loreto St., Sampaloc, Manila
+0915-645-5327
+alexandreeminon@gmail.com
+   
+PERSONAL INFORMATION
+	Age:
+	22
+	Sex:
+	Male
+	Birthday:
+	September 21, 2000
+	Civil Status:
+	Single
+	Citizenship:
+	Filipino
+	 
+KNOWLEDGE AND SKILLS
+	* Knowledgeable in C, C++, Python, Java, JavaScript, MySQL, MongoDB, React Native, HTML, CSS, and PHP.
+* Knowledgeable in Web Development, Data Science, Mobile Application Development, and UI/UX Design.
+	
+
+ACCOMPLISHED PROJECTS
+	* Online Freelancing Services (Web Project)
+Back End Developer and QA tester
+January 2022-March 2022
+* Poetry Generator (Web Project)
+Front End Developer
+April 2021- May 2021
+	
+
+EDUCATIONAL ATTAINMENT
+	Tertiary:
+	Technological University of The Philippines
+Ayala Blvd, Ermita, Manila
+Bachelor of Science in Computer Science
+	Secondary:
+	La Consolacion College - Caloocan
+496 A. Mabini Street Sangandaan 1408, Malabon
+2017 - 2019
+
+
+Lakan Dula High School
+2252 J. Luna St. Gagalangin, Tondo, Manila, 1012 Manila
+2013 - 2017
+	Primary:
+	Lakan Dula Elementary School
+154 Solis St, Gagalangin Manila
+2007 - 2013
+	
+
+APRIL KATE L. PASCUAL  
+1033 San Pablo St. Cabilang Baybay, Carmona, Cavite
+0919-863-8098
+aprilkatepascual23@gmail.com  
+PERSONAL INFORMATION
+	Age:
+	21
+	Sex:
+	Female
+	Birthday:
+	April 23, 2001
+	Civil Status:
+	Single
+	Citizenship:
+	Filipino
+	 
+KNOWLEDGE AND SKILLS
+	* Knowledgeable in C, C++, HTML, CSS, JavaScript, Python, Java, MySQL, MongoDB, React Native, Flask, and Flutter.
+* Knowledgeable in Web Development, Mobile Application Development, Data Science, UI/UX Design, and Quality Assurance (QA) Testing.
+	
+
+ACCOMPLISHED PROJECTS
+	* Meals for Makers (Web Project)
+Front End Developer & QA Tester
+January 2022-March 2022
+* Poetry Generator (Web Project)
+UI/UX Designer & Front End Developer
+April 2022- May 2022
+	
+
+EDUCATIONAL ATTAINMENT
+	Tertiary:
+	Technological University of The Philippines
+Ayala Blvd, Ermita, Manila
+Bachelor of Science in Computer Science
+	Secondary:
+	STI College Carmona
+Carmona, Cavite
+2017-2019
+
+
+Carmona National High School
+Carmona, Cavite
+2013-2017
+	Primary:
+	Cabilang Baybay Elementary School
+Cabilang Baybay, Carmona, Cavite
+2007-2013
